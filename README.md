@@ -4,7 +4,7 @@ Hearts2Hearts의 가상 3번째 미니앨범을 위한 비공식 Creative Visual
 
 > 서로 다른 꿈을 꾸었는데, 깨어 보니 같은 장면이 남아 있었다.
 
-[포트폴리오 보기 ↗](https://yooyoung101-blip.github.io/hearts2hearts-margin-creative-visual/)
+[포트폴리오 보기 ↗](https://yooyoung101-blip.github.io/hearts2hearts-same-page-creative-visual/)
 
 ## 제안 요약
 
