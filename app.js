@@ -112,8 +112,8 @@
       specs: [['렌즈', '24mm 틸트 시프트'], ['빛', '5600K 달빛 + 4300K 스탠드'], ['편집', '알람 소리에 맞춘 8컷']]
     },
     {
-      image: 'assets/member-ye-on.jpg',
-      alt: 'YE-ON의 파란 조명 인물 화보',
+      image: 'assets/h2h-dream-mood-02.jpg',
+      alt: '파란 조명과 유리 장식을 사용한 인물 연출 이미지',
       number: 'SCENE 02 / 06',
       time: '00:14 — 00:40',
       title: '첫 번째 꿈의 문',
@@ -121,8 +121,8 @@
       specs: [['렌즈', '50mm 핸드헬드'], ['장치', '실크 커튼 + 저속 팬'], ['편집', '문 동작 매치 컷']]
     },
     {
-      image: 'assets/ref-dream-greenhouse.jpg',
-      alt: '식물과 침대가 결합된 초현실 장면',
+      image: 'assets/ref-syncope-greenhouse.jpg',
+      alt: '푸른 안개 속 밤의 유리 온실',
       number: 'SCENE 03 / 06',
       time: '00:41 — 00:56',
       title: '밤의 온실',
@@ -130,8 +130,8 @@
       specs: [['렌즈', '35mm 저상 돌리'], ['빛', '새벽 실광 + 로우 포그'], ['편집', '낙하물 그래픽 매치']]
     },
     {
-      image: 'assets/ref-motion-blue.jpg',
-      alt: '장노출 파란빛 인물 사진',
+      image: 'assets/ref-ultramarine-motion.jpg',
+      alt: '울트라마린 의상과 장노출 잔상 이미지',
       number: 'SCENE 04 / 06',
       time: '02:06 — 02:28',
       title: '기억 오류',
@@ -139,7 +139,7 @@
       specs: [['렌즈', '85mm · 셔터 1/8초'], ['빛', '코발트 반사광'], ['편집', '프레임 잔상 3회 반복']]
     },
     {
-      image: 'assets/group-hires.jpg',
+      image: 'assets/h2h-dream-group-field.jpg',
       alt: 'Hearts2Hearts 여덟 멤버 단체 화보',
       number: 'SCENE 05 / 06',
       time: '00:57 — 02:05',
@@ -148,7 +148,7 @@
       specs: [['렌즈', '28mm 크레인 + 오비트'], ['구도', '방사형 오버헤드'], ['안무', '4+4 분리 → 8인 원']]
     },
     {
-      image: 'assets/cover-hires.jpg',
+      image: 'assets/h2h-dream-group-square.jpg',
       alt: 'Hearts2Hearts 단체 커버 화보',
       number: 'SCENE 06 / 06',
       time: '02:29 — 02:54',
@@ -207,8 +207,8 @@
   const boardOptions = {
     space: {
       room: { label: '파란 방', image: 'assets/ref-blue-room.jpg', base: '24mm 고정 카메라. 침대와 문 크기를 달리해 깊이가 틀어진 방을 만든다.' },
-      greenhouse: { label: '밤의 온실', image: 'assets/ref-dream-greenhouse.jpg', base: '35mm 저상 돌리. 실제 식물 사이에 파란 잎 하나만 두어 현실의 오류를 만든다.' },
-      studio: { label: '기억 스튜디오', image: 'assets/ref-motion-blue.jpg', base: '85mm 인물 프레임. 배경을 비우고 얼굴과 움직이는 의상 끝을 분리한다.' }
+      greenhouse: { label: '밤의 온실', image: 'assets/ref-syncope-greenhouse.jpg', base: '35mm 저상 돌리. 실제 식물 사이에 파란 잎 하나만 두어 현실의 오류를 만든다.' },
+      studio: { label: '기억 스튜디오', image: 'assets/ref-ultramarine-motion.jpg', base: '85mm 인물 프레임. 배경을 비우고 얼굴과 움직이는 의상 끝을 분리한다.' }
     },
     light: {
       moon: { label: '달빛', copy: '5600K 상부광과 4300K 생활광을 3:1로 둔다.' },
