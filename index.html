@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1ede5">
+  <meta name="description" content="Hearts2Hearts — MARGIN. A self-initiated Creative Visual comeback proposal built around eight-member storytelling.">
+  <title>Hearts2Hearts — MARGIN · Creative Visual Proposal v5</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23292927'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='white'%3EH2H%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__frame" aria-hidden="true"></div>
+    <p class="gate__meta">SELF-INITIATED CREATIVE VISUAL PROPOSAL · V5</p>
+    <div class="gate__title-wrap">
+      <p class="gate__artist">Hearts2Hearts</p>
+      <h1 class="gate__title" id="gate-title">MARG<span>I</span>N</h1>
+      <p class="gate__line">Eight people. One private language.</p>
+    </div>
+    <button class="gate__enter" id="enter-site" type="button">
+      <span>ENTER PROPOSAL</span><span aria-hidden="true">↘</span>
+    </button>
+    <p class="gate__hint">Press Enter or Space</p>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="맨 위로 이동">
+      <span class="brand__mark">H2H</span>
+      <span class="brand__project">MARGIN / CV 05</span>
+    </a>
+    <div class="topbar__right">
+      <span class="topbar__chapter" id="current-chapter">00 / THESIS</span>
+      <button class="index-button" id="index-open" type="button" aria-controls="index-drawer" aria-expanded="false">
+        INDEX <span aria-hidden="true">＋</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="index" id="index-drawer" aria-hidden="true">
+    <div class="index__head">
+      <p>PROJECT INDEX</p>
+      <button id="index-close" type="button" aria-label="목차 닫기">CLOSE ×</button>
+    </div>
+    <nav class="index__nav" aria-label="프로젝트 목차">
+      <a href="#thesis"><span>00</span><strong>Creative Thesis</strong><em>What comes next</em></a>
+      <a href="#artist-read"><span>01</span><strong>Artist Read</strong><em>Evidence & narrative</em></a>
+      <a href="#eight-system"><span>02</span><strong>Eight as One</strong><em>Member system</em></a>
+      <a href="#album"><span>03</span><strong>Album Architecture</strong><em>Music → visual</em></a>
+      <a href="#key-visual"><span>04</span><strong>Key Visual</strong><em>Hero image system</em></a>
+      <a href="#jacket"><span>05</span><strong>Jacket Direction</strong><em>Shoot decisions</em></a>
+      <a href="#styling"><span>06</span><strong>Styling / HMU</strong><em>Material logic</em></a>
+      <a href="#package"><span>07</span><strong>Package</strong><em>Physical system</em></a>
+      <a href="#promotion"><span>08</span><strong>Promotion</strong><em>Release experience</em></a>
+      <a href="#decisions"><span>09</span><strong>Decision Log</strong><em>What stays / what goes</em></a>
+    </nav>
+    <div class="index__foot">
+      <p>CREATIVE VISUAL / SELF-INITIATED CASE STUDY</p>
+      <p>NOT AFFILIATED WITH SM ENTERTAINMENT</p>
+    </div>
+  </aside>
+  <div class="index-backdrop" id="index-backdrop" aria-hidden="true"></div>
+
+  <main id="top">
+    <section class="hero chapter" id="thesis" data-chapter="00 / THESIS">
+      <div class="hero__image image-credit">
+        <picture>
+          <source media="(max-width: 680px)" srcset="assets/h2h-cover-nme.jpg">
+          <img src="assets/h2h-group-nme.jpg" alt="Hearts2Hearts eight members in an editorial group portrait">
+        </picture>
+        <span>REFERENCE IMAGE · NME / WONYOUNG KI, 2026</span>
+      </div>
+      <div class="hero__wash" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <p class="kicker light">PROPOSED NEXT CHAPTER · CREATIVE VISUAL CASE STUDY</p>
+        <h2 class="hero__title">MARG<span>I</span>N</h2>
+        <p class="hero__statement">A visual system for eight people who understand one another before the sentence is finished.</p>
+        <div class="hero__rule">
+          <span>SHARED LANGUAGE</span><span>PRIVATE SIGNALS</span><span>MUTUAL RECOGNITION</span>
+        </div>
+      </div>
+      <div class="hero__folio">
+        <span>H2H / 03</span>
+        <span>ALBUM + JACKET + STYLE + PACKAGE + PROMOTION</span>
+      </div>
+    </section>
+
+    <section class="intro-block section-pad">
+      <div class="section-number">00</div>
+      <div class="intro-block__title">
+        <p class="kicker">THE PROPOSAL IN ONE DECISION</p>
+        <h2>Do not add another symbol.<br><em>Direct the space between them.</em></h2>
+      </div>
+      <div class="intro-block__body">
+        <p>Hearts2Hearts has already moved from choice and first connection toward confidence, group chemistry and togetherness. The next useful question is not “How do eight members become close?” It is “What can eight people communicate without explaining?”</p>
+        <p class="note">MARGIN turns that question into one production rule: every image must show information passing from one member to another through gaze, gesture, distance or a shared object.</p>
+      </div>
+    </section>
+
+    <section class="artist-read chapter" id="artist-read" data-chapter="01 / ARTIST READ">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker">01 / ARTIST READ</p>
+          <h2>Evidence before aesthetics.</h2>
+        </div>
+        <p class="chapter-head__summary">Official definitions, released formats and member interviews establish the creative brief. The narrative arc below is a working interpretation—not an official SM storyline.</p>
+      </div>
+
+      <div class="evidence-grid section-pad no-top">
+        <article class="evidence-card evidence-card--lead">
+          <span class="card-index">OFFICIAL CORE</span>
+          <p>SM defines Hearts2Hearts through sincere emotion, a mysterious and beautiful musical world, and the ambition to connect with fans as a larger “us.”</p>
+          <a href="https://cdn2.smentertainment.com/wp-content/uploads/2025/02/4Q24_ScriptENG_CEO-Message_20250210_vF-1.pdf" target="_blank" rel="noreferrer">SM ENTERTAINMENT · 4Q24 CEO MESSAGE ↗</a>
+        </article>
+        <article class="evidence-card">
+          <span class="card-index">WHY EIGHT</span>
+          <p>In a 2026 interview, Ye-on described eight members as a source of more formations, storytelling options and stage interaction.</p>
+          <a href="https://www.nme.com/the-cover/hearts2hearts-22-06-2026-3952287" target="_blank" rel="noreferrer">NME · THE COVER ↗</a>
+        </article>
+        <article class="evidence-card">
+          <span class="card-index">PHYSICAL BEHAVIOR</span>
+          <p>FOCUS used three photobook versions and eight member smart-album covers; Lemon Tang expanded into photobook, jewel, keyring, sticker and summer-kit formats.</p>
+          <a href="https://global.shop.smtown.com/collections/hearts2hearts" target="_blank" rel="noreferrer">SMTOWN GLOBAL · H2H COLLECTION ↗</a>
+        </article>
+      </div>
+
+      <div class="arc section-pad">
+        <div class="arc__label">
+          <p class="kicker">WORKING NARRATIVE READ</p>
+          <p>Each release widens “connection” without losing youth, emotion or group identity.</p>
+        </div>
+        <ol class="arc__line">
+          <li><span>01</span><strong>CHOICE</strong><small>The Chase</small></li>
+          <li><span>02</span><strong>FRIENDSHIP</strong><small>Butterflies</small></li>
+          <li><span>03</span><strong>SELF-EXPRESSION</strong><small>STYLE</small></li>
+          <li><span>04</span><strong>ATTENTION</strong><small>FOCUS</small></li>
+          <li><span>05</span><strong>ATTITUDE</strong><small>RUDE!</small></li>
+          <li><span>06</span><strong>TOGETHERNESS</strong><small>Lemon Tang</small></li>
+          <li class="is-next"><span>07</span><strong>RECOGNITION</strong><small>MARGIN / proposal</small></li>
+        </ol>
+      </div>
+
+      <div class="quote-band">
+        <p>“Even if we don’t say it out loud, we know if another person is not feeling well.”</p>
+        <span>IAN · NME, 2026</span>
+      </div>
+    </section>
+
+    <section class="members chapter" id="eight-system" data-chapter="02 / EIGHT AS ONE">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker">02 / EIGHT AS ONE</p>
+          <h2>One artist.<br>Eight visual functions.</h2>
+        </div>
+        <div class="chapter-head__summary">
+          <p>This is a creative-direction read, not an official position chart. Each member is given a distinct image function while the group remains the main subject.</p>
+          <p class="formula">8 → 4+4 → 3+3+2 → 2×4 → 1×8</p>
+        </div>
+      </div>
+
+      <div class="member-grid">
+        <article class="member-card">
+          <img src="assets/jiwoo.jpg" alt="Jiwoo editorial portrait" loading="lazy">
+          <div><span>01 / JIWOO</span><strong>COMPOSURE</strong><p>Group anchor. Stable eye-line and central framing hold complex formations together.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/carmen.jpg" alt="Carmen editorial portrait" loading="lazy">
+          <div><span>02 / CARMEN</span><strong>WARMTH</strong><p>Emotional entry point. Close framing and tactile styling give the system human weight.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/yuha.jpg" alt="Yuha editorial portrait" loading="lazy">
+          <div><span>03 / YUHA</span><strong>CONNECTION</strong><p>Relational center. Best used where gesture passes cleanly between two units.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/stella.jpg" alt="Stella editorial portrait" loading="lazy">
+          <div><span>04 / STELLA</span><strong>VOICE</strong><p>Verbal character. Spoken detail and direct address give promotional assets personality.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/juun.jpg" alt="Juun editorial portrait" loading="lazy">
+          <div><span>05 / JUUN</span><strong>MOVEMENT</strong><p>Kinetic author. Choreography experiments translate into repeated gesture and motion trace.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/a-na.jpg" alt="A-na editorial portrait" loading="lazy">
+          <div><span>06 / A-NA</span><strong>ADAPTATION</strong><p>Performance switch. A controlled change in expression can turn the same frame from soft to sharp.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/ian.jpg" alt="Ian editorial portrait" loading="lazy">
+          <div><span>07 / IAN</span><strong>INSTINCT</strong><p>Readable impulse. Quick reaction and off-axis gaze make the shared signal feel unplanned.</p></div>
+        </article>
+        <article class="member-card">
+          <img src="assets/ye-on.jpg" alt="Ye-on editorial portrait" loading="lazy">
+          <div><span>08 / YE-ON</span><strong>CLARITY</strong><p>Story logic. Precise placement makes a dense eight-member composition easy to read.</p></div>
+        </article>
+      </div>
+      <p class="image-source section-pad no-top">PORTRAIT REFERENCES · NME / WONYOUNG KI, 2026. Used only to study member distinction and composition.</p>
+    </section>
+
+    <section class="album chapter" id="album" data-chapter="03 / ALBUM">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker light">03 / ALBUM ARCHITECTURE</p>
+          <h2>Sound leaves room<br>for a reply.</h2>
+        </div>
+        <p class="chapter-head__summary">A hypothetical six-track mini album. The sonic language stays youthful and melodic, but introduces silence, clipped rhythm and voice fragments as space for member-to-member response.</p>
+      </div>
+
+      <div class="tracklist section-pad no-top">
+        <div class="tracklist__intro">
+          <span>3RD MINI ALBUM / PROPOSAL</span>
+          <h3>MARGIN</h3>
+          <p>Graphite synth-pop, dry vocal proximity and elastic UK garage. The title track is built around a call that another member completes.</p>
+        </div>
+        <ol>
+          <li class="is-title"><span>01</span><strong>MARGIN</strong><em>TITLE · 03:04</em><small>Negative space / call-and-response / interrupted line</small></li>
+          <li><span>02</span><strong>SAY LESS</strong><em>02:48</em><small>Clipped R&amp;B / close framing / mouth &amp; hand detail</small></li>
+          <li><span>03</span><strong>GESTURE</strong><em>02:56</em><small>Syncopated pop / movement relay / 2×4 formation</small></li>
+          <li><span>04</span><strong>PARALLEL PLAY</strong><em>03:12</em><small>4+4 unit / mirrored action / separate rooms</small></li>
+          <li><span>05</span><strong>AFTERIMAGE</strong><em>03:20</em><small>Dream pop / shutter trace / repeated silhouette</small></li>
+          <li><span>06</span><strong>WITHOUT ASKING</strong><em>03:06</em><small>Warm close / full eight / one continuous take</small></li>
+        </ol>
+      </div>
+
+      <div class="translation-grid section-pad">
+        <div><span>SOUND</span><strong>Dry, close vocal</strong><p>→ 85mm portrait, no visible set edge</p></div>
+        <div><span>RHYTHM</span><strong>Skipped downbeat</strong><p>→ one empty position inside a formation</p></div>
+        <div><span>TEXTURE</span><strong>Graphite synth</strong><p>→ charcoal tailoring, silver pencil marks</p></div>
+        <div><span>HOOK</span><strong>Voice passed across members</strong><p>→ gesture relay from frame to frame</p></div>
+      </div>
+    </section>
+
+    <section class="key-visual chapter" id="key-visual" data-chapter="04 / KEY VISUAL">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker">04 / KEY VISUAL</p>
+          <h2>The group is the hero.</h2>
+        </div>
+        <p class="chapter-head__summary">The wordmark never replaces the members. It sits in the margin, while a single berry rule shows where a signal crosses from one person to another.</p>
+      </div>
+
+      <div class="kv-shell section-pad no-top">
+        <div class="kv-stage" aria-live="polite">
+          <div class="kv-slide kv-slide--group is-active" data-kv="group">
+            <picture>
+              <source media="(max-width: 680px)" srcset="assets/h2h-cover-nme.jpg">
+              <img src="assets/h2h-group-nme.jpg" alt="Eight-member group key visual reference">
+            </picture>
+          </div>
+          <div class="kv-slide kv-slide--crop" data-kv="crop">
+            <img src="assets/h2h-cover-nme.jpg" alt="Eight-member vertical crop key visual reference">
+          </div>
+          <div class="kv-slide kv-slide--detail" data-kv="detail">
+            <img src="assets/juun.jpg" alt="Juun detail portrait reference">
+            <img src="assets/a-na.jpg" alt="A-na detail portrait reference">
+            <img src="assets/ian.jpg" alt="Ian detail portrait reference">
+            <img src="assets/ye-on.jpg" alt="Ye-on detail portrait reference">
+          </div>
+          <div class="kv-stage__title" aria-hidden="true">MARG<span>I</span>N</div>
+          <div class="kv-stage__line" aria-hidden="true"></div>
+          <p class="kv-stage__caption"><span>HEARTS2HEARTS</span><span>THE 3RD MINI ALBUM / PROPOSAL</span></p>
+        </div>
+        <div class="kv-controls" role="group" aria-label="키 비주얼 보기 선택">
+          <button class="is-active" type="button" data-kv-target="group"><span>01</span> GROUP / 8</button>
+          <button type="button" data-kv-target="crop"><span>02</span> MARGIN CROP</button>
+          <button type="button" data-kv-target="detail"><span>03</span> DETAIL / 4</button>
+        </div>
+        <div class="kv-notes">
+          <p><strong>ONE RULE</strong> The berry line must connect two bodies, gestures or eye-lines. It cannot float as decoration.</p>
+          <p><strong>REFERENCE STATUS</strong> Editorial images prototype crop and layout only. Final output requires a commissioned jacket shoot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jacket chapter" id="jacket" data-chapter="05 / JACKET">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker light">05 / JACKET DIRECTION</p>
+          <h2>Three versions.<br>One relationship system.</h2>
+        </div>
+        <p class="chapter-head__summary">Version changes are built from camera distance and member arrangement—not unrelated concepts. All three must still read as MARGIN when placed side by side.</p>
+      </div>
+
+      <div class="jacket-grid section-pad no-top">
+        <article class="jacket-card jacket-card--white">
+          <div class="jacket-card__image"><img src="assets/h2h-group-nme.jpg" alt="Group jacket reference" loading="lazy"></div>
+          <span>A / GROUP</span><h3>WHITE MARGIN</h3>
+          <p>All eight in one shallow room. Ivory layers share one long shadow; the only accent is a berry seam crossing two members.</p>
+          <ul><li>50mm / eye level</li><li>Soft directional light</li><li>8 → 4+4 master frames</li></ul>
+        </article>
+        <article class="jacket-card jacket-card--borrowed">
+          <div class="jacket-card__image pair-image"><img src="assets/jiwoo.jpg" alt="Jiwoo pair reference" loading="lazy"><img src="assets/carmen.jpg" alt="Carmen pair reference" loading="lazy"></div>
+          <span>B / UNIT</span><h3>BORROWED SIGNAL</h3>
+          <p>Four pair stories. Each member carries one detail borrowed from the previous member: ribbon, cuff, note or ring.</p>
+          <ul><li>85mm portrait + 35mm unit</li><li>Direct flash / low fill</li><li>Pair → 2×4 sequence</li></ul>
+        </article>
+        <article class="jacket-card jacket-card--after">
+          <div class="jacket-card__image quartet-image"><img src="assets/yuha.jpg" alt="Yuha motion reference" loading="lazy"><img src="assets/stella.jpg" alt="Stella motion reference" loading="lazy"><img src="assets/juun.jpg" alt="Juun motion reference" loading="lazy"><img src="assets/ye-on.jpg" alt="Ye-on motion reference" loading="lazy"></div>
+          <span>C / TRACE</span><h3>AFTERIMAGE</h3>
+          <p>Individual movement is recorded as a trace that enters the next portrait. Eight pages form one continuous gesture.</p>
+          <ul><li>50mm / 1⁄8 shutter</li><li>Edge light + black flag</li><li>1×8 continuous edit</li></ul>
+        </article>
+      </div>
+
+      <div class="desk section-pad">
+        <div class="desk__intro">
+          <p class="kicker light">ART DIRECTOR DESK</p>
+          <h3>Make a shoot decision,<br>not a mood-board choice.</h3>
+          <p>Three practical inputs produce one usable call-sheet direction. This is the only production interaction retained in v5.</p>
+        </div>
+        <div class="desk__controls">
+          <fieldset data-desk-group="composition">
+            <legend>01 / COMPOSITION</legend>
+            <button class="is-active" type="button" data-value="GROUP 8">GROUP 8</button>
+            <button type="button" data-value="4+4 UNIT">4+4 UNIT</button>
+            <button type="button" data-value="PAIR RELAY">PAIR</button>
+            <button type="button" data-value="1×8 TRACE">INDIVIDUAL</button>
+          </fieldset>
+          <fieldset data-desk-group="lens">
+            <legend>02 / LENS</legend>
+            <button type="button" data-value="35MM / SPATIAL">35MM</button>
+            <button class="is-active" type="button" data-value="50MM / BALANCED">50MM</button>
+            <button type="button" data-value="85MM / INTIMATE">85MM</button>
+          </fieldset>
+          <fieldset data-desk-group="light">
+            <legend>03 / LIGHT</legend>
+            <button class="is-active" type="button" data-value="SOFT / DIRECTIONAL">SOFT</button>
+            <button type="button" data-value="FLASH / HARD RETURN">FLASH</button>
+            <button type="button" data-value="EDGE / MOTION TRACE">EDGE</button>
+          </fieldset>
+        </div>
+        <div class="desk__brief">
+          <p class="desk__label">LIVE PRODUCTION BRIEF</p>
+          <div class="desk__values"><strong id="brief-composition">GROUP 8</strong><strong id="brief-lens">50MM / BALANCED</strong><strong id="brief-light">SOFT / DIRECTIONAL</strong></div>
+          <p id="brief-direction">Keep all eight inside one frame. Build two connected eye-lines, one empty interval and a single shared object. Shoot the clean master before unit variations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="styling chapter" id="styling" data-chapter="06 / STYLING">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker">06 / STYLING + HMU</p>
+          <h2>Difference through material,<br>not member colors.</h2>
+        </div>
+        <p class="chapter-head__summary">No eight-color assignment. Individuality comes from proportion, surface and movement while the palette stays group-first: paper ivory, graphite and washed berry.</p>
+      </div>
+
+      <div class="style-rail section-pad no-top">
+        <article>
+          <div class="style-rail__image"><img src="assets/style-ivory.jpg" alt="Cream sheer balloon blouse styling reference" loading="lazy"><span>01</span></div>
+          <p class="style-rail__source">REFERENCE · FRAME</p>
+          <h3>PAPER / AIR</h3>
+          <p>Sheer organza, crushed cotton and thin knit. Volume moves before the body, making gesture visible.</p>
+          <a href="https://frame-store.com/products/the-sheer-balloon-blouse-cream" target="_blank" rel="noreferrer">SOURCE ↗</a>
+        </article>
+        <article>
+          <div class="style-rail__image"><img src="assets/style-graphite.jpg" alt="Anthracite tailored suit styling reference" loading="lazy"><span>02</span></div>
+          <p class="style-rail__source">REFERENCE · SCANLAN THEODORE</p>
+          <h3>GRAPHITE / LINE</h3>
+          <p>Clean tailoring, long trouser break and narrow knits. Silhouette creates the group rhythm.</p>
+          <a href="https://www.scanlantheodore.com/au/products/italian-plaid-trouser-anthracite" target="_blank" rel="noreferrer">SOURCE ↗</a>
+        </article>
+        <article>
+          <div class="style-rail__image"><img src="assets/style-berry.jpg" alt="Burgundy satin dress styling reference" loading="lazy"><span>03</span></div>
+          <p class="style-rail__source">REFERENCE · GESTUZ</p>
+          <h3>BERRY / REFLECTION</h3>
+          <p>Satin appears only on two or three members per frame. It catches and passes light like a signal.</p>
+          <a href="https://www.dkcompany.com/global/brands/gestuz" target="_blank" rel="noreferrer">SOURCE ↗</a>
+        </article>
+      </div>
+
+      <div class="hmu section-pad">
+        <div class="hmu__title"><p class="kicker">HMU RULE</p><h3>One face, one interruption.</h3></div>
+        <div class="hmu__grid">
+          <div><span>SKIN</span><strong>Natural satin</strong><p>No uniform glass skin. Keep texture at close distance.</p></div>
+          <div><span>EYE</span><strong>Graphite inner line</strong><p>Placement varies; color does not.</p></div>
+          <div><span>LIP</span><strong>Muted berry stain</strong><p>Built up only for the B version.</p></div>
+          <div><span>HAIR</span><strong>One displaced detail</strong><p>Loose strand, off-center part or borrowed pin.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="package chapter" id="package" data-chapter="07 / PACKAGE">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker light">07 / PHYSICAL ALBUM</p>
+          <h2>The package completes<br>the relationship.</h2>
+        </div>
+        <p class="chapter-head__summary">Current Hearts2Hearts releases already support large-format kits, member smart albums and multiple photobook versions. MARGIN keeps that commercial range but gives every format the same relational logic.</p>
+      </div>
+
+      <div class="package-main section-pad no-top">
+        <div class="current-anchor">
+          <div class="current-anchor__image"><img src="assets/lemon-tang-pack.jpg" alt="Official Lemon Tang Summer Kit package contents" loading="lazy"></div>
+          <div><span>CURRENT ECOSYSTEM ANCHOR</span><h3>Lemon Tang<br>Summer Kit</h3><p>Large-format box, 100p photobook, mini book and a complete eight-card set establish physical scale and collectability.</p><a href="https://global.shop.smtown.com/products/hearts2hearts-the-2nd-mini-album-lemon-tang-summer-kit-ver-limited-edition" target="_blank" rel="noreferrer">OFFICIAL PRODUCT SOURCE ↗</a></div>
+        </div>
+
+        <div class="package-proposal">
+          <div class="package-scene" aria-label="MARGIN album package mockup">
+            <div class="package-book"><img src="assets/h2h-group-nme.jpg" alt=""><span>MARG<span>I</span>N</span></div>
+            <div class="package-sleeve"><span>H2H</span><strong>PRIVATE<br>LANGUAGE</strong></div>
+            <div class="package-strip"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span></div>
+            <div class="package-disc">MARGIN<br><small>H2H / 03</small></div>
+          </div>
+          <div class="package-proposal__text"><span>PROPOSED MAIN FORMAT</span><h3>Shared Edition</h3><p>A graphite slipcase holds an ivory photobook. Eight translucent portrait leaves only reveal the complete berry line when stacked in member order.</p></div>
+        </div>
+      </div>
+
+      <div class="sku-grid section-pad">
+        <article><span>01 / GROUP</span><h3>SHARED EDITION</h3><p>92p photobook · CD · 8 translucent leaves · group card · signal strip</p><strong>Team identity first</strong></article>
+        <article><span>02 / UNIT</span><h3>PAIR FOLIO ×4</h3><p>Four 24p folios · pair poster · shared-object card · random 1 of 4</p><strong>Collect by relationship</strong></article>
+        <article><span>03 / SMART</span><h3>MARGIN MARK</h3><p>NFC card · reusable transparent ruler · 1 of 8 member inserts</p><strong>Small, useful, recognizable</strong></article>
+      </div>
+    </section>
+
+    <section class="promotion chapter" id="promotion" data-chapter="08 / PROMOTION">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker">08 / PROMOTION</p>
+          <h2>Reveal the language,<br>not the answer.</h2>
+        </div>
+        <p class="chapter-head__summary">The rollout teaches fans how MARGIN works: first the empty space, then the gestures, then the relationships, and only at the end the full group image.</p>
+      </div>
+
+      <ol class="rollout section-pad no-top">
+        <li><span>D−21</span><strong>THE EMPTY FRAME</strong><p>Eight seats, one missing interval. No member reveal.</p><em>POSTER / MOTION 6s</em></li>
+        <li><span>D−14</span><strong>GESTURE FILES</strong><p>Eight hand and eye-line details; audio carries the unfinished hook.</p><em>8 VERTICAL CLIPS</em></li>
+        <li><span>D−10</span><strong>PAIR RELAY</strong><p>Four unit films pass one object across separate rooms.</p><em>4 × 15s FILMS</em></li>
+        <li><span>D−07</span><strong>JACKET DROP</strong><p>White Margin → Borrowed Signal → Afterimage.</p><em>3 IMAGE SETS</em></li>
+        <li><span>D−03</span><strong>MARGIN LINE</strong><p>Fans choose two members and receive one shared-direction prompt.</p><em>WEB / STORY TOOL</em></li>
+        <li><span>D+01</span><strong>ONE-TAKE EIGHT</strong><p>The final performance film resolves every gesture in one frame.</p><em>PERFORMANCE FILM</em></li>
+      </ol>
+
+      <div class="signal-prototype section-pad">
+        <div class="signal-prototype__intro">
+          <p class="kicker light">PROMOTION PROTOTYPE / PAIR RELAY</p>
+          <h3>Choose two signals.</h3>
+          <p>One small interaction demonstrates the campaign idea. It does not block the portfolio, hide content or turn review into a scavenger hunt.</p>
+        </div>
+        <div class="signal-prototype__play">
+          <div class="signal-members" role="group" aria-label="멤버 두 명 선택">
+            <button type="button" data-member="JIWOO">JIWOO</button><button type="button" data-member="CARMEN">CARMEN</button>
+            <button type="button" data-member="YUHA">YUHA</button><button type="button" data-member="STELLA">STELLA</button>
+            <button type="button" data-member="JUUN">JUUN</button><button type="button" data-member="A-NA">A-NA</button>
+            <button type="button" data-member="IAN">IAN</button><button type="button" data-member="YE-ON">YE-ON</button>
+          </div>
+          <div class="signal-output" id="signal-output">
+            <span>WAITING FOR 02 SIGNALS</span>
+            <strong>SELECT A PAIR</strong>
+            <p>The production prompt will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="decisions chapter" id="decisions" data-chapter="09 / DECISIONS">
+      <div class="chapter-head section-pad">
+        <div>
+          <p class="kicker light">09 / FINAL EDIT</p>
+          <h2>What the recruiter<br>should remember.</h2>
+        </div>
+        <p class="chapter-head__summary">v5 removes the mechanics that competed with the work and keeps the interactions that expose a Creative Visual decision.</p>
+      </div>
+
+      <div class="edit-grid section-pad no-top">
+        <div class="edit-column edit-column--keep">
+          <span>KEEP / STRENGTHEN</span>
+          <ul><li>Evidence-led artist narrative</li><li>Group-first key visual</li><li>Actionable jacket direction</li><li>Material-based styling system</li><li>Commercial package architecture</li><li>One production tool + one promotion prototype</li></ul>
+        </div>
+        <div class="edit-column edit-column--cut">
+          <span>CUT / REDUCE</span>
+          <ul><li>Hidden eight-signal scavenger hunt</li><li>Progress HUD and locked final cover</li><li>Multiple labs that repeat the same proof</li><li>Decorative gamer copy</li><li>Long speculative Korean prose</li><li>Uncredited or off-concept imagery</li></ul>
+        </div>
+      </div>
+
+      <div class="closing section-pad">
+        <p class="closing__label">FINAL CREATIVE THESIS</p>
+        <p class="closing__statement">Hearts2Hearts does not need a louder symbol. It needs an image system that makes eight people’s shared understanding visible.</p>
+        <div class="closing__meta">
+          <p><strong>SCOPE</strong><span>Artist Read / Album / Key Visual / Jacket / Styling / HMU / Package / Promotion / Web Prototype</span></p>
+          <p><strong>STATUS</strong><span>Self-initiated portfolio case study. Editorial and official product images are credited visual references, not commissioned outputs.</span></p>
+          <p><strong>AI DISCLOSURE</strong><span>AI-assisted research synthesis and front-end prototyping. No generated member likenesses are presented as official photography.</span></p>
+        </div>
+      </div>
+
+      <div class="sources section-pad">
+        <p class="kicker light">SELECTED SOURCES</p>
+        <div class="sources__grid">
+          <a href="https://cdn2.smentertainment.com/wp-content/uploads/2025/02/4Q24_ScriptENG_CEO-Message_20250210_vF-1.pdf" target="_blank" rel="noreferrer"><span>01</span>SM Entertainment · 4Q24 CEO Message</a>
+          <a href="https://www.nme.com/the-cover/hearts2hearts-22-06-2026-3952287" target="_blank" rel="noreferrer"><span>02</span>NME · Hearts2Hearts: The Cover, 2026</a>
+          <a href="https://global.shop.smtown.com/products/the-1st-mini-album-focus-photobook-ver-set" target="_blank" rel="noreferrer"><span>03</span>SMTOWN Global · FOCUS Photobook Set</a>
+          <a href="https://global.shop.smtown.com/products/hearts2hearts-the-2nd-mini-album-lemon-tang-summer-kit-ver-limited-edition" target="_blank" rel="noreferrer"><span>04</span>SMTOWN Global · Lemon Tang Summer Kit</a>
+          <a href="https://www.wonderlandmagazine.com/2025/10/29/interview-hearts2hearts/" target="_blank" rel="noreferrer"><span>05</span>Wonderland · Hearts2Hearts Interview, 2025</a>
+          <a href="https://www.marieclaire.com/culture/music/hearts2hearts-lemon-tang-music-taste-interview/" target="_blank" rel="noreferrer"><span>06</span>Marie Claire · Lemon Tang Interview, 2026</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>Hearts2Hearts — MARGIN</strong><span>CREATIVE VISUAL PROPOSAL / V5</span></div>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
