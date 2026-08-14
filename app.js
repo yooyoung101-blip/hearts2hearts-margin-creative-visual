@@ -1,145 +1,139 @@
 (() => {
+  const soundBars = document.getElementById('sound-bars');
+  for (let i = 0; i < 42; i += 1) {
+    const bar = document.createElement('i');
+    bar.style.setProperty('--h', `${18 + (i * 37) % 82}%`);
+    soundBars.appendChild(bar);
+  }
+
   const body = document.body;
   const gate = document.getElementById('gate');
   const enter = document.getElementById('enter-site');
-
-  body.classList.add('is-locked');
-
   const openSite = () => {
     if (gate.classList.contains('is-open')) return;
     gate.classList.add('is-open');
     body.classList.remove('is-locked');
-    window.setTimeout(() => gate.setAttribute('aria-hidden', 'true'), 850);
+    setTimeout(() => gate.setAttribute('aria-hidden', 'true'), 900);
   };
-
   enter.addEventListener('click', openSite);
-  window.addEventListener('keydown', (event) => {
-    if (!gate.classList.contains('is-open') && (event.key === 'Enter' || event.code === 'Space')) {
-      event.preventDefault();
-      openSite();
+  window.addEventListener('keydown', (e) => {
+    if (!gate.classList.contains('is-open') && (e.key === 'Enter' || e.code === 'Space')) {
+      e.preventDefault(); openSite();
     }
   });
 
-  const drawer = document.getElementById('index-drawer');
-  const backdrop = document.getElementById('index-backdrop');
-  const drawerOpen = document.getElementById('index-open');
-  const drawerClose = document.getElementById('index-close');
+  const cursor = document.querySelector('.cursor');
+  window.addEventListener('pointermove', e => {
+    cursor.style.left = `${e.clientX}px`; cursor.style.top = `${e.clientY}px`;
+  });
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('pointerenter', () => cursor.classList.add('is-hover'));
+    el.addEventListener('pointerleave', () => cursor.classList.remove('is-hover'));
+  });
 
-  const setDrawer = (open) => {
-    drawer.classList.toggle('is-open', open);
-    backdrop.classList.toggle('is-open', open);
-    drawer.setAttribute('aria-hidden', String(!open));
-    drawerOpen.setAttribute('aria-expanded', String(open));
+  const drawer = document.getElementById('index');
+  const backdrop = document.getElementById('backdrop');
+  const indexOpen = document.getElementById('index-open');
+  const setDrawer = open => {
+    drawer.classList.toggle('is-open', open); backdrop.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', String(!open)); indexOpen.setAttribute('aria-expanded', String(open));
     body.classList.toggle('is-locked', open);
-    if (open) drawerClose.focus();
-    else drawerOpen.focus();
   };
-
-  drawerOpen.addEventListener('click', () => setDrawer(true));
-  drawerClose.addEventListener('click', () => setDrawer(false));
+  indexOpen.addEventListener('click', () => setDrawer(true));
+  document.getElementById('index-close').addEventListener('click', () => setDrawer(false));
   backdrop.addEventListener('click', () => setDrawer(false));
-  drawer.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setDrawer(false)));
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && drawer.classList.contains('is-open')) setDrawer(false);
-  });
+  const wipe = document.getElementById('wipe');
+  drawer.querySelectorAll('a').forEach(link => link.addEventListener('click', e => {
+    e.preventDefault(); const target = link.getAttribute('href'); setDrawer(false);
+    wipe.classList.remove('is-active'); void wipe.offsetWidth; wipe.classList.add('is-active');
+    setTimeout(() => document.querySelector(target)?.scrollIntoView(), 480);
+  }));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') setDrawer(false); });
 
-  const progress = document.getElementById('progress');
+  const progress = document.querySelector('.progress');
   const updateProgress = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    const value = max > 0 ? (window.scrollY / max) * 100 : 0;
-    progress.style.width = `${Math.min(100, Math.max(0, value))}%`;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = `${max > 0 ? scrollY / max * 100 : 0}%`;
   };
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
-  updateProgress();
-
-  const chapterLabel = document.getElementById('current-chapter');
-  const chapters = [...document.querySelectorAll('.chapter')];
-  const chapterObserver = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
+  const chapterLabel = document.getElementById('chapter-label');
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries.filter(x => x.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
     if (visible) chapterLabel.textContent = visible.target.dataset.chapter;
-  }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, .1, .3] });
-  chapters.forEach((chapter) => chapterObserver.observe(chapter));
+  }, {rootMargin:'-20% 0px -62% 0px', threshold:[0,.15,.4]});
+  document.querySelectorAll('.chapter').forEach(el => observer.observe(el));
 
-  const kvButtons = document.querySelectorAll('[data-kv-target]');
-  const kvSlides = document.querySelectorAll('[data-kv]');
-  kvButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const target = button.dataset.kvTarget;
-      kvButtons.forEach((item) => item.classList.toggle('is-active', item === button));
-      kvSlides.forEach((slide) => slide.classList.toggle('is-active', slide.dataset.kv === target));
-    });
-  });
-
-  const deskState = {
-    composition: 'GROUP 8',
-    lens: '50MM / BALANCED',
-    light: 'SOFT / DIRECTIONAL'
-  };
-
-  const briefText = {
-    'GROUP 8': 'Keep all eight inside one frame. Build two connected eye-lines, one empty interval and a single shared object. Shoot the clean master before unit variations.',
-    '4+4 UNIT': 'Stage two units with the same gesture at different timing. Leave a deliberate gap between the groups so the berry line can bridge both halves.',
-    'PAIR RELAY': 'Direct four pairs around one action: give, mirror, interrupt and complete. Every second frame must answer the previous frame.',
-    '1×8 TRACE': 'Shoot eight portraits in fixed camera position. Each member begins with the final gesture of the member before them, creating one continuous edit.'
-  };
-
-  const updateBrief = () => {
-    document.getElementById('brief-composition').textContent = deskState.composition;
-    document.getElementById('brief-lens').textContent = deskState.lens;
-    document.getElementById('brief-light').textContent = deskState.light;
-    document.getElementById('brief-direction').textContent = `${briefText[deskState.composition]} Use ${deskState.lens.toLowerCase()} framing with ${deskState.light.toLowerCase()} light.`;
-  };
-
-  document.querySelectorAll('[data-desk-group]').forEach((group) => {
-    const key = group.dataset.deskGroup;
-    group.querySelectorAll('button').forEach((button) => {
-      button.addEventListener('click', () => {
-        group.querySelectorAll('button').forEach((item) => item.classList.toggle('is-active', item === button));
-        deskState[key] = button.dataset.value;
-        updateBrief();
-      });
-    });
-  });
-
-  const memberButtons = [...document.querySelectorAll('[data-member]')];
-  const signalOutput = document.getElementById('signal-output');
-  let selectedMembers = [];
-  const prompts = [
-    ['GESTURE RELAY', 'The first member begins a hand movement; the second finishes it in the next cut. Keep camera height and crop identical.'],
-    ['SHARED OBJECT', 'One object exits the first frame and enters the second. Change only the receiving gesture, not the object position.'],
-    ['EYE-LINE CUT', 'Place both members in separate frames. Their eye-lines meet only in the edit, creating one implied space.'],
-    ['MIRROR DISTANCE', 'Repeat one pose at two camera distances: a spatial 35mm unit and an intimate 85mm answer.'],
-    ['PROXIMITY SHIFT', 'Begin with physical distance, then close the gap without changing expression. The relationship—not the pose—is the reveal.']
-  ];
-
-  const renderSignal = () => {
-    if (selectedMembers.length < 2) {
-      signalOutput.innerHTML = `<span>WAITING FOR 02 SIGNALS</span><strong>${selectedMembers[0] || 'SELECT A PAIR'}</strong><p>Choose one more member to create a shoot prompt.</p>`;
-      return;
+  const collected = [];
+  const count = document.getElementById('signal-count');
+  const status = document.getElementById('signal-status');
+  const finalOpen = document.getElementById('final-open');
+  document.querySelectorAll('[data-signal]').forEach(button => button.addEventListener('click', () => {
+    if (button.classList.contains('is-found')) return;
+    button.classList.add('is-found'); collected.push(button.dataset.signal);
+    count.textContent = `${collected.length} / 8`;
+    status.textContent = collected.join(' · ');
+    if (collected.length === 8) {
+      finalOpen.disabled = false; document.querySelector('.signals').classList.add('is-complete');
+      status.textContent = '최종 커버가 열렸습니다.';
+      document.getElementById('collected-words').textContent = collected.join(' · ');
     }
-    const indexA = memberButtons.findIndex((button) => button.dataset.member === selectedMembers[0]);
-    const indexB = memberButtons.findIndex((button) => button.dataset.member === selectedMembers[1]);
-    const [title, copy] = prompts[(indexA + indexB) % prompts.length];
-    signalOutput.innerHTML = `<span>${selectedMembers.join(' × ')}</span><strong>${title}</strong><p>${copy}</p>`;
-  };
+  }));
+  const finalCover = document.getElementById('final-cover');
+  finalOpen.addEventListener('click', () => { finalCover.classList.add('is-open'); finalCover.setAttribute('aria-hidden','false'); body.classList.add('is-locked'); });
+  document.getElementById('final-close').addEventListener('click', () => { finalCover.classList.remove('is-open'); finalCover.setAttribute('aria-hidden','true'); body.classList.remove('is-locked'); });
 
-  memberButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const member = button.dataset.member;
-      if (selectedMembers.includes(member)) {
-        selectedMembers = selectedMembers.filter((item) => item !== member);
-      } else {
-        if (selectedMembers.length === 2) {
-          const removed = selectedMembers.shift();
-          memberButtons.find((item) => item.dataset.member === removed)?.classList.remove('is-selected');
-        }
-        selectedMembers.push(member);
-      }
-      memberButtons.forEach((item) => item.classList.toggle('is-selected', selectedMembers.includes(item.dataset.member)));
-      renderSignal();
-    });
-  });
+  const pairButtons = [...document.querySelectorAll('[data-member]')];
+  const pairOutput = document.getElementById('pair-output');
+  let pair = [];
+  const pairDirections = [
+    ['GESTURE RELAY','첫 멤버가 시작한 손동작을 다음 컷에서 두 번째 멤버가 같은 높이로 완성한다.'],
+    ['EYE-LINE CUT','서로 다른 세트에서 촬영하되 두 사람의 시선이 편집점에서 정확히 만나게 한다.'],
+    ['SHARED OBJECT','큐카드가 첫 프레임 밖으로 나가 같은 위치에서 두 번째 프레임으로 들어온다.'],
+    ['MIRROR DISTANCE','같은 포즈를 35mm 전신과 85mm 클로즈업으로 나눠 한 동작처럼 연결한다.']
+  ];
+  pairButtons.forEach((button, index) => button.addEventListener('click', () => {
+    const name = button.dataset.member;
+    if (pair.includes(name)) pair = pair.filter(x => x !== name);
+    else { if (pair.length === 2) pair.shift(); pair.push(name); }
+    pairButtons.forEach(b => b.classList.toggle('is-selected', pair.includes(b.dataset.member)));
+    if (pair.length < 2) { pairOutput.innerHTML = `<span>SELECT 02</span><b>${pair[0] || 'PAIR DIRECTION'}</b><p>한 명을 더 선택하세요.</p>`; return; }
+    const other = pairButtons.findIndex(b => b.dataset.member === pair[0]);
+    const [title,copy] = pairDirections[(index + other) % pairDirections.length];
+    pairOutput.innerHTML = `<span>${pair.join(' × ')}</span><b>${title}</b><p>${copy}</p>`;
+  }));
+
+  const cover = document.getElementById('cover');
+  const coverState = {crop:'wide', tone:'blue', mark:'line'};
+  document.querySelectorAll('[data-cover-group]').forEach(group => group.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+    group.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === button));
+    coverState[group.dataset.coverGroup] = button.dataset.value;
+    cover.dataset.crop = coverState.crop; cover.dataset.tone = coverState.tone; cover.dataset.mark = coverState.mark;
+  })));
+  cover.dataset.crop='wide'; cover.dataset.tone='blue'; cover.dataset.mark='line';
+
+  const desk = {formation:'GROUP 8',lens:'50MM',light:'FLASH'};
+  const briefCopy = {
+    'GROUP 8':'여덟 명을 하나의 비대칭 포메이션으로 두고 카메라 장비까지 와이드 프레임에 포함한다.',
+    '4+4 UNIT':'두 유닛이 같은 제스처를 다른 타이밍으로 반복하고 프레임 중앙의 빈 공간으로 연결한다.',
+    'PAIR RELAY':'네 쌍이 주기·받기·비추기·완성하기 동작을 이어 하나의 편집 리듬을 만든다.',
+    '1×8 PORTRAIT':'카메라 위치를 고정하고 앞 멤버의 마지막 동작을 다음 멤버의 첫 동작으로 이어 촬영한다.'
+  };
+  const lightCopy = {SOFT:'부드러운 방향광으로 피부와 천의 질감을 살린다.',FLASH:'하드 플래시로 인물과 세트 표면을 동시에 선명하게 잡는다.',EDGE:'측면 엣지 라이트로 실루엣과 멤버 간 간격을 분리한다.'};
+  const renderBrief = () => {
+    document.getElementById('brief-head').textContent = `${desk.formation} · ${desk.lens} · ${desk.light}`;
+    document.getElementById('brief-copy').textContent = `${briefCopy[desk.formation]} ${desk.lens} 렌즈를 기준으로 ${lightCopy[desk.light]}`;
+  };
+  document.querySelectorAll('[data-desk]').forEach(group => group.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+    group.querySelectorAll('button').forEach(x => x.classList.toggle('active', x === button)); desk[group.dataset.desk] = button.dataset.value; renderBrief();
+  })));
+
+  const wordButtons = [...document.querySelectorAll('[data-word]')];
+  const sentence = document.getElementById('sentence');
+  let nextWord = 0;
+  wordButtons.forEach(button => button.addEventListener('click', () => {
+    if (Number(button.dataset.order) !== nextWord) { button.animate([{transform:'translateX(-3px)'},{transform:'translateX(3px)'},{transform:'none'}],{duration:180}); return; }
+    button.classList.add('done'); button.disabled = true; nextWord++;
+    sentence.textContent = wordButtons.map((b,i) => i < nextWord ? b.dataset.word : '_').join(' ');
+    if (nextWord === 8) sentence.textContent += '.';
+  }));
 })();

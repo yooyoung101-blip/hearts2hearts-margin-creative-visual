@@ -3,505 +3,218 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f1ede5">
-  <meta name="description" content="Hearts2Hearts — MARGIN. A self-initiated Creative Visual comeback proposal built around eight-member storytelling.">
-  <title>Hearts2Hearts — MARGIN · Creative Visual Proposal v5</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23292927'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='white'%3EH2H%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#b8cce5">
+  <meta name="description" content="Hearts2Hearts의 다음 장면을 제안하는 가상 미니앨범 SAME PAGE Creative Visual 기획안.">
+  <title>Hearts2Hearts — SAME PAGE</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b8cce5'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='17' font-weight='700' fill='%23151619'%3EH2H%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-    <div class="gate__frame" aria-hidden="true"></div>
-    <p class="gate__meta">SELF-INITIATED CREATIVE VISUAL PROPOSAL · V5</p>
-    <div class="gate__title-wrap">
-      <p class="gate__artist">Hearts2Hearts</p>
-      <h1 class="gate__title" id="gate-title">MARG<span>I</span>N</h1>
-      <p class="gate__line">Eight people. One private language.</p>
+<body class="is-locked">
+  <div class="cursor" aria-hidden="true"><span>♡</span></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="SAME PAGE 입장 화면">
+    <div class="gate__noise"></div>
+    <p class="gate__eyebrow">HEARTS2HEARTS · THE NEXT CHAPTER</p>
+    <div class="gate__logo" aria-label="Hearts2Hearts"><b>H</b><i>2</i><b>H</b></div>
+    <div class="gate__title">
+      <span>SAME</span><span>PAGE</span>
     </div>
-    <button class="gate__enter" id="enter-site" type="button">
-      <span>ENTER PROPOSAL</span><span aria-hidden="true">↘</span>
-    </button>
-    <p class="gate__hint">Press Enter or Space</p>
+    <p class="gate__copy">서로 다른 여덟 개의 시선이<br>하나의 장면이 되는 순간.</p>
+    <button class="gate__enter" id="enter-site" type="button"><span>기획안 보기</span><span>↘</span></button>
+    <small>ENTER 또는 SPACE</small>
   </div>
 
-  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="wipe" id="wipe" aria-hidden="true"><span>SAME PAGE</span></div>
 
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="맨 위로 이동">
-      <span class="brand__mark">H2H</span>
-      <span class="brand__project">MARGIN / CV 05</span>
-    </a>
+    <a class="brand" href="#top"><b>H2H</b><span>SAME PAGE</span></a>
     <div class="topbar__right">
-      <span class="topbar__chapter" id="current-chapter">00 / THESIS</span>
-      <button class="index-button" id="index-open" type="button" aria-controls="index-drawer" aria-expanded="false">
-        INDEX <span aria-hidden="true">＋</span>
-      </button>
+      <span id="chapter-label">00 / CONCEPT</span>
+      <button id="index-open" type="button" aria-expanded="false">INDEX ＋</button>
     </div>
   </header>
 
-  <aside class="index" id="index-drawer" aria-hidden="true">
-    <div class="index__head">
-      <p>PROJECT INDEX</p>
-      <button id="index-close" type="button" aria-label="목차 닫기">CLOSE ×</button>
-    </div>
-    <nav class="index__nav" aria-label="프로젝트 목차">
-      <a href="#thesis"><span>00</span><strong>Creative Thesis</strong><em>What comes next</em></a>
-      <a href="#artist-read"><span>01</span><strong>Artist Read</strong><em>Evidence & narrative</em></a>
-      <a href="#eight-system"><span>02</span><strong>Eight as One</strong><em>Member system</em></a>
-      <a href="#album"><span>03</span><strong>Album Architecture</strong><em>Music → visual</em></a>
-      <a href="#key-visual"><span>04</span><strong>Key Visual</strong><em>Hero image system</em></a>
-      <a href="#jacket"><span>05</span><strong>Jacket Direction</strong><em>Shoot decisions</em></a>
-      <a href="#styling"><span>06</span><strong>Styling / HMU</strong><em>Material logic</em></a>
-      <a href="#package"><span>07</span><strong>Package</strong><em>Physical system</em></a>
-      <a href="#promotion"><span>08</span><strong>Promotion</strong><em>Release experience</em></a>
-      <a href="#decisions"><span>09</span><strong>Decision Log</strong><em>What stays / what goes</em></a>
+  <aside class="index" id="index" aria-hidden="true">
+    <div class="index__head"><span>PROJECT INDEX</span><button id="index-close" type="button">CLOSE ×</button></div>
+    <nav>
+      <a href="#concept"><i>00</i><b>CONCEPT</b><span>다음 장면</span></a>
+      <a href="#artist"><i>01</i><b>ARTIST DNA</b><span>근거</span></a>
+      <a href="#music"><i>02</i><b>MUSIC</b><span>타이틀 트랙</span></a>
+      <a href="#mv"><i>03</i><b>MUSIC VIDEO</b><span>장면 연출</span></a>
+      <a href="#members"><i>04</i><b>8 MEMBERS</b><span>개인 디렉션</span></a>
+      <a href="#jacket"><i>05</i><b>JACKET</b><span>키 비주얼</span></a>
+      <a href="#styling"><i>06</i><b>STYLING</b><span>8개 실루엣</span></a>
+      <a href="#package"><i>07</i><b>PACKAGE</b><span>소장 경험</span></a>
+      <a href="#promotion"><i>08</i><b>PROMOTION</b><span>공개 순서</span></a>
     </nav>
-    <div class="index__foot">
-      <p>CREATIVE VISUAL / SELF-INITIATED CASE STUDY</p>
-      <p>NOT AFFILIATED WITH SM ENTERTAINMENT</p>
-    </div>
+    <p>SELF-INITIATED CREATIVE VISUAL PROPOSAL<br>NOT AFFILIATED WITH SM ENTERTAINMENT</p>
   </aside>
-  <div class="index-backdrop" id="index-backdrop" aria-hidden="true"></div>
+  <div class="backdrop" id="backdrop"></div>
+
+  <aside class="signals" aria-label="수집한 장면">
+    <button id="final-open" type="button" disabled><span>SCENE</span><b id="signal-count">0 / 8</b></button>
+    <p id="signal-status">각 챕터의 ●를 눌러 최종 커버를 완성하세요.</p>
+  </aside>
 
   <main id="top">
-    <section class="hero chapter" id="thesis" data-chapter="00 / THESIS">
-      <div class="hero__image image-credit">
-        <picture>
-          <source media="(max-width: 680px)" srcset="assets/h2h-cover-nme.jpg">
-          <img src="assets/h2h-group-nme.jpg" alt="Hearts2Hearts eight members in an editorial group portrait">
-        </picture>
-        <span>REFERENCE IMAGE · NME / WONYOUNG KI, 2026</span>
-      </div>
-      <div class="hero__wash" aria-hidden="true"></div>
+    <section class="hero chapter" id="concept" data-chapter="00 / CONCEPT">
+      <img src="assets/same-page-key-visual.png" alt="아이스 블루 방송 스튜디오에 모인 여덟 명의 키 비주얼 스터디">
+      <div class="hero__shade"></div>
       <div class="hero__copy">
-        <p class="kicker light">PROPOSED NEXT CHAPTER · CREATIVE VISUAL CASE STUDY</p>
-        <h2 class="hero__title">MARG<span>I</span>N</h2>
-        <p class="hero__statement">A visual system for eight people who understand one another before the sentence is finished.</p>
-        <div class="hero__rule">
-          <span>SHARED LANGUAGE</span><span>PRIVATE SIGNALS</span><span>MUTUAL RECOGNITION</span>
-        </div>
+        <p>HEARTS2HEARTS · 3RD MINI ALBUM PROPOSAL</p>
+        <h1><span>SAME</span><span>PAGE</span></h1>
+        <h2>여덟 명이 같은 답을 내는 것이 아니라,<br>서로 다른 시선으로 하나의 장면을 완성한다.</h2>
       </div>
-      <div class="hero__folio">
-        <span>H2H / 03</span>
-        <span>ALBUM + JACKET + STYLE + PACKAGE + PROMOTION</span>
-      </div>
+      <div class="hero__tags"><span>2000s DANCE POP</span><span>SLEEK R&amp;B</span><span>UK GARAGE</span><span>PRIVATE BROADCAST</span></div>
+      <button class="signal" data-signal="시선" type="button" aria-label="첫 번째 장면 수집">●</button>
+      <small class="credit">AI VISUAL STUDY · DIRECTION FOR COMPOSITION, LIGHT &amp; WARDROBE ONLY</small>
     </section>
 
-    <section class="intro-block section-pad">
-      <div class="section-number">00</div>
-      <div class="intro-block__title">
-        <p class="kicker">THE PROPOSAL IN ONE DECISION</p>
-        <h2>Do not add another symbol.<br><em>Direct the space between them.</em></h2>
-      </div>
-      <div class="intro-block__body">
-        <p>Hearts2Hearts has already moved from choice and first connection toward confidence, group chemistry and togetherness. The next useful question is not “How do eight members become close?” It is “What can eight people communicate without explaining?”</p>
-        <p class="note">MARGIN turns that question into one production rule: every image must show information passing from one member to another through gaze, gesture, distance or a shared object.</p>
-      </div>
+    <section class="statement">
+      <div><span>WHY NOW</span><h2>연결 다음은<br><em>공유된 관점</em></h2></div>
+      <p>지금까지의 하츠투하츠가 만남, 우정, 자기표현, 집중, 태도, 여름의 에너지를 보여줬다면 다음 앨범은 여덟 명의 관계가 만든 ‘합’을 보여준다. 말보다 빠르게 통하는 팀의 실제 강점을 음악의 주고받는 구조와 카메라 릴레이로 번역한다.</p>
     </section>
 
-    <section class="artist-read chapter" id="artist-read" data-chapter="01 / ARTIST READ">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker">01 / ARTIST READ</p>
-          <h2>Evidence before aesthetics.</h2>
-        </div>
-        <p class="chapter-head__summary">Official definitions, released formats and member interviews establish the creative brief. The narrative arc below is a working interpretation—not an official SM storyline.</p>
+    <section class="artist chapter" id="artist" data-chapter="01 / ARTIST DNA">
+      <div class="section-title"><span>01 / ARTIST DNA</span><h2>이미 가진 것에서<br>다음 장면을 찾았다.</h2></div>
+      <div class="dna-grid">
+        <figure class="dna-card dna-card--wide">
+          <img src="assets/h2h-group-nme.jpg" alt="하츠투하츠 8인 그룹 화보">
+          <figcaption><b>8인의 관계</b><p>많은 포메이션과 멤버 사이의 상호작용은 이 팀만의 가장 큰 화면 자산이다.</p></figcaption>
+        </figure>
+        <figure class="dna-card">
+          <img src="assets/focus-cover.jpg" alt="FOCUS 앨범 커버">
+          <figcaption><b>몽환보다 선명하게</b><p>부드러운 R&amp;B 감도는 유지하고, 이번에는 표정과 동작을 더 날카롭게 잡는다.</p></figcaption>
+        </figure>
+        <figure class="dna-card">
+          <img src="assets/lemon-tang-cover.jpg" alt="Lemon Tang 앨범 커버">
+          <figcaption><b>청량 다음의 성숙</b><p>밝은 에너지를 버리지 않되 아이스 블루와 옥스블러드로 한 단계 정제한다.</p></figcaption>
+        </figure>
       </div>
-
-      <div class="evidence-grid section-pad no-top">
-        <article class="evidence-card evidence-card--lead">
-          <span class="card-index">OFFICIAL CORE</span>
-          <p>SM defines Hearts2Hearts through sincere emotion, a mysterious and beautiful musical world, and the ambition to connect with fans as a larger “us.”</p>
-          <a href="https://cdn2.smentertainment.com/wp-content/uploads/2025/02/4Q24_ScriptENG_CEO-Message_20250210_vF-1.pdf" target="_blank" rel="noreferrer">SM ENTERTAINMENT · 4Q24 CEO MESSAGE ↗</a>
-        </article>
-        <article class="evidence-card">
-          <span class="card-index">WHY EIGHT</span>
-          <p>In a 2026 interview, Ye-on described eight members as a source of more formations, storytelling options and stage interaction.</p>
-          <a href="https://www.nme.com/the-cover/hearts2hearts-22-06-2026-3952287" target="_blank" rel="noreferrer">NME · THE COVER ↗</a>
-        </article>
-        <article class="evidence-card">
-          <span class="card-index">PHYSICAL BEHAVIOR</span>
-          <p>FOCUS used three photobook versions and eight member smart-album covers; Lemon Tang expanded into photobook, jewel, keyring, sticker and summer-kit formats.</p>
-          <a href="https://global.shop.smtown.com/collections/hearts2hearts" target="_blank" rel="noreferrer">SMTOWN GLOBAL · H2H COLLECTION ↗</a>
-        </article>
-      </div>
-
-      <div class="arc section-pad">
-        <div class="arc__label">
-          <p class="kicker">WORKING NARRATIVE READ</p>
-          <p>Each release widens “connection” without losing youth, emotion or group identity.</p>
-        </div>
-        <ol class="arc__line">
-          <li><span>01</span><strong>CHOICE</strong><small>The Chase</small></li>
-          <li><span>02</span><strong>FRIENDSHIP</strong><small>Butterflies</small></li>
-          <li><span>03</span><strong>SELF-EXPRESSION</strong><small>STYLE</small></li>
-          <li><span>04</span><strong>ATTENTION</strong><small>FOCUS</small></li>
-          <li><span>05</span><strong>ATTITUDE</strong><small>RUDE!</small></li>
-          <li><span>06</span><strong>TOGETHERNESS</strong><small>Lemon Tang</small></li>
-          <li class="is-next"><span>07</span><strong>RECOGNITION</strong><small>MARGIN / proposal</small></li>
-        </ol>
-      </div>
-
-      <div class="quote-band">
-        <p>“Even if we don’t say it out loud, we know if another person is not feeling well.”</p>
-        <span>IAN · NME, 2026</span>
-      </div>
+      <div class="source-row"><a href="https://www.nme.com/the-cover/hearts2hearts-22-06-2026-3952287" target="_blank" rel="noreferrer">NME 인터뷰 ↗</a><a href="https://www.smentertainment.com/newsroom/sm-%EC%8B%A0%EC%9D%B8-%EA%B1%B8%EA%B7%B8%EB%A3%B9-%ED%95%98%EC%B8%A0%ED%88%AC%ED%95%98%EC%B8%A0-%EB%AF%B8%EA%B5%AD-%EC%9C%A0%EB%AA%85-%EB%AE%A4%EC%A7%81-%ED%8E%98%EC%8A%A4%ED%8B%B0/" target="_blank" rel="noreferrer">SM 공식 서사 ↗</a></div>
+      <button class="signal" data-signal="관계" type="button" aria-label="두 번째 장면 수집">●</button>
     </section>
 
-    <section class="members chapter" id="eight-system" data-chapter="02 / EIGHT AS ONE">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker">02 / EIGHT AS ONE</p>
-          <h2>One artist.<br>Eight visual functions.</h2>
-        </div>
-        <div class="chapter-head__summary">
-          <p>This is a creative-direction read, not an official position chart. Each member is given a distinct image function while the group remains the main subject.</p>
-          <p class="formula">8 → 4+4 → 3+3+2 → 2×4 → 1×8</p>
-        </div>
+    <section class="music chapter" id="music" data-chapter="02 / MUSIC">
+      <div class="section-title light"><span>02 / MUSIC</span><h2>같은 멜로디를<br>여덟 방식으로 이어 부른다.</h2></div>
+      <div class="title-track">
+        <div><span>TITLE TRACK</span><h2>SAME PAGE</h2><p>반짝이는 2000년대 댄스 팝 후렴에 세련된 R&amp;B 보컬과 UK garage 리듬을 얹는다. 한 멤버가 끝낸 단어를 다음 멤버가 이어받고, 마지막 후렴에서 여덟 목소리가 한 문장으로 합쳐진다.</p></div>
+        <div class="sound-bars" id="sound-bars" aria-hidden="true"></div>
       </div>
+      <ol class="tracklist">
+        <li><span>01</span><b>LINE OPEN</b><em>1:12</em></li>
+        <li class="active"><span>02</span><b>SAME PAGE</b><em>3:18 · TITLE</em></li>
+        <li><span>03</span><b>CUT TO ME</b><em>2:54</em></li>
+        <li><span>04</span><b>SIDE B</b><em>3:06</em></li>
+        <li><span>05</span><b>8:08</b><em>3:31</em></li>
+      </ol>
+      <div class="member-sound"><span>IAN 저음 인트로</span><span>YUHA 멜로디 시작</span><span>STELLA 스포큰 전환</span><span>JUUN 댄스 브레이크</span><span>CARMEN 클라이맥스</span><span>8인 코러스</span></div>
+      <button class="signal" data-signal="리듬" type="button" aria-label="세 번째 장면 수집">●</button>
+    </section>
 
+    <section class="mv chapter" id="mv" data-chapter="03 / MUSIC VIDEO">
+      <div class="section-title"><span>03 / MUSIC VIDEO</span><h2>PRIVATE<br>BROADCAST</h2><p>방과 후나 판타지 세계가 아니다. 방송이 끝난 새벽, 여덟 멤버가 빈 스튜디오를 점유하고 자신들만의 생방송을 완성한다.</p></div>
+      <figure class="mv-board"><img src="assets/same-page-mv-treatment.png" alt="SAME PAGE 뮤직비디오 4장면 스토리보드"><figcaption>AI MV TREATMENT STUDY · 실제 제작 시 콘티·로케이션·VFX 프리비즈로 발전</figcaption></figure>
+      <div class="scene-strip">
+        <article><span>00:00</span><b>CONTROL ROOM</b><p>꺼진 모니터가 한 대씩 켜지고 여덟 시선이 서로 다른 화면을 고른다.</p></article>
+        <article><span>00:42</span><b>CUE RELAY</b><p>옥스블러드 큐카드가 프레임 밖으로 나가 다음 세트의 손으로 이어진다.</p></article>
+        <article><span>01:36</span><b>LIVE TAKE</b><p>카메라와 케이블을 숨기지 않은 채 8인 포메이션을 롱테이크로 촬영한다.</p></article>
+        <article><span>03:02</span><b>ONE FRAME</b><p>동이 틀 때 여덟 명이 한 카메라를 바라보며 송출 화면을 직접 종료한다.</p></article>
+      </div>
+      <button class="signal" data-signal="장면" type="button" aria-label="네 번째 장면 수집">●</button>
+    </section>
+
+    <section class="members chapter" id="members" data-chapter="04 / 8 MEMBERS">
+      <div class="section-title light"><span>04 / 8 MEMBERS</span><h2>한 색을 나누지 않고<br>한 규칙을 다르게 입힌다.</h2></div>
       <div class="member-grid">
-        <article class="member-card">
-          <img src="assets/jiwoo.jpg" alt="Jiwoo editorial portrait" loading="lazy">
-          <div><span>01 / JIWOO</span><strong>COMPOSURE</strong><p>Group anchor. Stable eye-line and central framing hold complex formations together.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/carmen.jpg" alt="Carmen editorial portrait" loading="lazy">
-          <div><span>02 / CARMEN</span><strong>WARMTH</strong><p>Emotional entry point. Close framing and tactile styling give the system human weight.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/yuha.jpg" alt="Yuha editorial portrait" loading="lazy">
-          <div><span>03 / YUHA</span><strong>CONNECTION</strong><p>Relational center. Best used where gesture passes cleanly between two units.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/stella.jpg" alt="Stella editorial portrait" loading="lazy">
-          <div><span>04 / STELLA</span><strong>VOICE</strong><p>Verbal character. Spoken detail and direct address give promotional assets personality.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/juun.jpg" alt="Juun editorial portrait" loading="lazy">
-          <div><span>05 / JUUN</span><strong>MOVEMENT</strong><p>Kinetic author. Choreography experiments translate into repeated gesture and motion trace.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/a-na.jpg" alt="A-na editorial portrait" loading="lazy">
-          <div><span>06 / A-NA</span><strong>ADAPTATION</strong><p>Performance switch. A controlled change in expression can turn the same frame from soft to sharp.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/ian.jpg" alt="Ian editorial portrait" loading="lazy">
-          <div><span>07 / IAN</span><strong>INSTINCT</strong><p>Readable impulse. Quick reaction and off-axis gaze make the shared signal feel unplanned.</p></div>
-        </article>
-        <article class="member-card">
-          <img src="assets/ye-on.jpg" alt="Ye-on editorial portrait" loading="lazy">
-          <div><span>08 / YE-ON</span><strong>CLARITY</strong><p>Story logic. Precise placement makes a dense eight-member composition easy to read.</p></div>
-        </article>
+        <article><img src="assets/jiwoo.jpg" alt="지우"><div><span>JIWOO</span><b>균형의 중심</b><p>롱 코트 · 정면 50mm · 8인 마스터컷의 축</p></div></article>
+        <article><img src="assets/carmen.jpg" alt="카르멘"><div><span>CARMEN</span><b>감정의 절정</b><p>아이보리 수트 · 웜 클로즈업 · 마지막 고음</p></div></article>
+        <article><img src="assets/yuha.jpg" alt="유하"><div><span>YUHA</span><b>서사의 시작</b><p>옥스블러드 니트 · 피아노 손동작 · 첫 멜로디</p></div></article>
+        <article><img src="assets/stella.jpg" alt="스텔라"><div><span>STELLA</span><b>말의 전환</b><p>블랙 드레스 · 렌즈 직시 · 스포큰 브리지</p></div></article>
+        <article><img src="assets/juun.jpg" alt="주은"><div><span>JUUN</span><b>움직임의 축</b><p>레더 쇼츠 · 로 앵글 · 포메이션 전환</p></div></article>
+        <article><img src="assets/a-na.jpg" alt="에이나"><div><span>A-NA</span><b>화면의 비율</b><p>롱 실루엣 · 와이드 프레임 · 정적인 긴장</p></div></article>
+        <article><img src="assets/ian.jpg" alt="이안"><div><span>IAN</span><b>낮은 온도</b><p>크롭 재킷 · 타이트 크롭 · 저음 인트로</p></div></article>
+        <article><img src="assets/ye-on.jpg" alt="예온"><div><span>YE-ON</span><b>선명한 결말</b><p>아이보리 칼럼 · 정면광 · 마지막 시선</p></div></article>
       </div>
-      <p class="image-source section-pad no-top">PORTRAIT REFERENCES · NME / WONYOUNG KI, 2026. Used only to study member distinction and composition.</p>
-    </section>
-
-    <section class="album chapter" id="album" data-chapter="03 / ALBUM">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker light">03 / ALBUM ARCHITECTURE</p>
-          <h2>Sound leaves room<br>for a reply.</h2>
+      <div class="pair-tool">
+        <div><span>PAIR RELAY</span><h3>두 멤버를 고르면 촬영 연결 동작이 만들어집니다.</h3></div>
+        <div class="pair-buttons">
+          <button type="button" data-member="JIWOO">JIWOO</button><button type="button" data-member="CARMEN">CARMEN</button>
+          <button type="button" data-member="YUHA">YUHA</button><button type="button" data-member="STELLA">STELLA</button>
+          <button type="button" data-member="JUUN">JUUN</button><button type="button" data-member="A-NA">A-NA</button>
+          <button type="button" data-member="IAN">IAN</button><button type="button" data-member="YE-ON">YE-ON</button>
         </div>
-        <p class="chapter-head__summary">A hypothetical six-track mini album. The sonic language stays youthful and melodic, but introduces silence, clipped rhythm and voice fragments as space for member-to-member response.</p>
+        <div class="pair-output" id="pair-output"><span>SELECT 02</span><b>PAIR DIRECTION</b><p>두 멤버를 선택하세요.</p></div>
       </div>
-
-      <div class="tracklist section-pad no-top">
-        <div class="tracklist__intro">
-          <span>3RD MINI ALBUM / PROPOSAL</span>
-          <h3>MARGIN</h3>
-          <p>Graphite synth-pop, dry vocal proximity and elastic UK garage. The title track is built around a call that another member completes.</p>
-        </div>
-        <ol>
-          <li class="is-title"><span>01</span><strong>MARGIN</strong><em>TITLE · 03:04</em><small>Negative space / call-and-response / interrupted line</small></li>
-          <li><span>02</span><strong>SAY LESS</strong><em>02:48</em><small>Clipped R&amp;B / close framing / mouth &amp; hand detail</small></li>
-          <li><span>03</span><strong>GESTURE</strong><em>02:56</em><small>Syncopated pop / movement relay / 2×4 formation</small></li>
-          <li><span>04</span><strong>PARALLEL PLAY</strong><em>03:12</em><small>4+4 unit / mirrored action / separate rooms</small></li>
-          <li><span>05</span><strong>AFTERIMAGE</strong><em>03:20</em><small>Dream pop / shutter trace / repeated silhouette</small></li>
-          <li><span>06</span><strong>WITHOUT ASKING</strong><em>03:06</em><small>Warm close / full eight / one continuous take</small></li>
-        </ol>
-      </div>
-
-      <div class="translation-grid section-pad">
-        <div><span>SOUND</span><strong>Dry, close vocal</strong><p>→ 85mm portrait, no visible set edge</p></div>
-        <div><span>RHYTHM</span><strong>Skipped downbeat</strong><p>→ one empty position inside a formation</p></div>
-        <div><span>TEXTURE</span><strong>Graphite synth</strong><p>→ charcoal tailoring, silver pencil marks</p></div>
-        <div><span>HOOK</span><strong>Voice passed across members</strong><p>→ gesture relay from frame to frame</p></div>
-      </div>
-    </section>
-
-    <section class="key-visual chapter" id="key-visual" data-chapter="04 / KEY VISUAL">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker">04 / KEY VISUAL</p>
-          <h2>The group is the hero.</h2>
-        </div>
-        <p class="chapter-head__summary">The wordmark never replaces the members. It sits in the margin, while a single berry rule shows where a signal crosses from one person to another.</p>
-      </div>
-
-      <div class="kv-shell section-pad no-top">
-        <div class="kv-stage" aria-live="polite">
-          <div class="kv-slide kv-slide--group is-active" data-kv="group">
-            <picture>
-              <source media="(max-width: 680px)" srcset="assets/h2h-cover-nme.jpg">
-              <img src="assets/h2h-group-nme.jpg" alt="Eight-member group key visual reference">
-            </picture>
-          </div>
-          <div class="kv-slide kv-slide--crop" data-kv="crop">
-            <img src="assets/h2h-cover-nme.jpg" alt="Eight-member vertical crop key visual reference">
-          </div>
-          <div class="kv-slide kv-slide--detail" data-kv="detail">
-            <img src="assets/juun.jpg" alt="Juun detail portrait reference">
-            <img src="assets/a-na.jpg" alt="A-na detail portrait reference">
-            <img src="assets/ian.jpg" alt="Ian detail portrait reference">
-            <img src="assets/ye-on.jpg" alt="Ye-on detail portrait reference">
-          </div>
-          <div class="kv-stage__title" aria-hidden="true">MARG<span>I</span>N</div>
-          <div class="kv-stage__line" aria-hidden="true"></div>
-          <p class="kv-stage__caption"><span>HEARTS2HEARTS</span><span>THE 3RD MINI ALBUM / PROPOSAL</span></p>
-        </div>
-        <div class="kv-controls" role="group" aria-label="키 비주얼 보기 선택">
-          <button class="is-active" type="button" data-kv-target="group"><span>01</span> GROUP / 8</button>
-          <button type="button" data-kv-target="crop"><span>02</span> MARGIN CROP</button>
-          <button type="button" data-kv-target="detail"><span>03</span> DETAIL / 4</button>
-        </div>
-        <div class="kv-notes">
-          <p><strong>ONE RULE</strong> The berry line must connect two bodies, gestures or eye-lines. It cannot float as decoration.</p>
-          <p><strong>REFERENCE STATUS</strong> Editorial images prototype crop and layout only. Final output requires a commissioned jacket shoot.</p>
-        </div>
-      </div>
+      <p class="portrait-credit">MEMBER PORTRAIT REFERENCES · NME / WONYOUNG KI, 2026</p>
+      <button class="signal" data-signal="인물" type="button" aria-label="다섯 번째 장면 수집">●</button>
     </section>
 
     <section class="jacket chapter" id="jacket" data-chapter="05 / JACKET">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker light">05 / JACKET DIRECTION</p>
-          <h2>Three versions.<br>One relationship system.</h2>
+      <div class="section-title"><span>05 / JACKET</span><h2>카메라가 보이는<br>재킷.</h2><p>세트를 감추지 않는다. 촬영 장비와 케이블을 프레임 안에 남겨 ‘우리의 화면을 우리가 만든다’는 태도를 키 비주얼로 만든다.</p></div>
+      <div class="jacket-workspace">
+        <div class="cover-lab">
+          <div class="cover" id="cover"><img src="assets/same-page-key-visual.png" alt="SAME PAGE 커버 미리보기"><div class="cover__tone"></div><span class="cover__title">SAME<br>PAGE</span><i></i></div>
+          <div class="lab-controls">
+            <div data-cover-group="crop"><span>CROP</span><button class="active" data-value="wide">WIDE</button><button data-value="tight">TIGHT</button><button data-value="offset">OFFSET</button></div>
+            <div data-cover-group="tone"><span>LIGHT</span><button class="active" data-value="blue">BLUE</button><button data-value="flash">FLASH</button><button data-value="mono">MONO</button></div>
+            <div data-cover-group="mark"><span>MARK</span><button class="active" data-value="line">LINE</button><button data-value="box">BOX</button><button data-value="none">NONE</button></div>
+          </div>
         </div>
-        <p class="chapter-head__summary">Version changes are built from camera distance and member arrangement—not unrelated concepts. All three must still read as MARGIN when placed side by side.</p>
-      </div>
-
-      <div class="jacket-grid section-pad no-top">
-        <article class="jacket-card jacket-card--white">
-          <div class="jacket-card__image"><img src="assets/h2h-group-nme.jpg" alt="Group jacket reference" loading="lazy"></div>
-          <span>A / GROUP</span><h3>WHITE MARGIN</h3>
-          <p>All eight in one shallow room. Ivory layers share one long shadow; the only accent is a berry seam crossing two members.</p>
-          <ul><li>50mm / eye level</li><li>Soft directional light</li><li>8 → 4+4 master frames</li></ul>
-        </article>
-        <article class="jacket-card jacket-card--borrowed">
-          <div class="jacket-card__image pair-image"><img src="assets/jiwoo.jpg" alt="Jiwoo pair reference" loading="lazy"><img src="assets/carmen.jpg" alt="Carmen pair reference" loading="lazy"></div>
-          <span>B / UNIT</span><h3>BORROWED SIGNAL</h3>
-          <p>Four pair stories. Each member carries one detail borrowed from the previous member: ribbon, cuff, note or ring.</p>
-          <ul><li>85mm portrait + 35mm unit</li><li>Direct flash / low fill</li><li>Pair → 2×4 sequence</li></ul>
-        </article>
-        <article class="jacket-card jacket-card--after">
-          <div class="jacket-card__image quartet-image"><img src="assets/yuha.jpg" alt="Yuha motion reference" loading="lazy"><img src="assets/stella.jpg" alt="Stella motion reference" loading="lazy"><img src="assets/juun.jpg" alt="Juun motion reference" loading="lazy"><img src="assets/ye-on.jpg" alt="Ye-on motion reference" loading="lazy"></div>
-          <span>C / TRACE</span><h3>AFTERIMAGE</h3>
-          <p>Individual movement is recorded as a trace that enters the next portrait. Eight pages form one continuous gesture.</p>
-          <ul><li>50mm / 1⁄8 shutter</li><li>Edge light + black flag</li><li>1×8 continuous edit</li></ul>
-        </article>
-      </div>
-
-      <div class="desk section-pad">
-        <div class="desk__intro">
-          <p class="kicker light">ART DIRECTOR DESK</p>
-          <h3>Make a shoot decision,<br>not a mood-board choice.</h3>
-          <p>Three practical inputs produce one usable call-sheet direction. This is the only production interaction retained in v5.</p>
-        </div>
-        <div class="desk__controls">
-          <fieldset data-desk-group="composition">
-            <legend>01 / COMPOSITION</legend>
-            <button class="is-active" type="button" data-value="GROUP 8">GROUP 8</button>
-            <button type="button" data-value="4+4 UNIT">4+4 UNIT</button>
-            <button type="button" data-value="PAIR RELAY">PAIR</button>
-            <button type="button" data-value="1×8 TRACE">INDIVIDUAL</button>
-          </fieldset>
-          <fieldset data-desk-group="lens">
-            <legend>02 / LENS</legend>
-            <button type="button" data-value="35MM / SPATIAL">35MM</button>
-            <button class="is-active" type="button" data-value="50MM / BALANCED">50MM</button>
-            <button type="button" data-value="85MM / INTIMATE">85MM</button>
-          </fieldset>
-          <fieldset data-desk-group="light">
-            <legend>03 / LIGHT</legend>
-            <button class="is-active" type="button" data-value="SOFT / DIRECTIONAL">SOFT</button>
-            <button type="button" data-value="FLASH / HARD RETURN">FLASH</button>
-            <button type="button" data-value="EDGE / MOTION TRACE">EDGE</button>
-          </fieldset>
-        </div>
-        <div class="desk__brief">
-          <p class="desk__label">LIVE PRODUCTION BRIEF</p>
-          <div class="desk__values"><strong id="brief-composition">GROUP 8</strong><strong id="brief-lens">50MM / BALANCED</strong><strong id="brief-light">SOFT / DIRECTIONAL</strong></div>
-          <p id="brief-direction">Keep all eight inside one frame. Build two connected eye-lines, one empty interval and a single shared object. Shoot the clean master before unit variations.</p>
+        <div class="director-desk">
+          <span>ART DIRECTOR DESK</span><h3>촬영 조건을 선택해<br>한 장의 브리프로 묶습니다.</h3>
+          <div data-desk="formation"><b>FORMATION</b><button class="active" data-value="GROUP 8">GROUP 8</button><button data-value="4+4 UNIT">4+4 UNIT</button><button data-value="PAIR RELAY">PAIR</button><button data-value="1×8 PORTRAIT">1×8</button></div>
+          <div data-desk="lens"><b>LENS</b><button data-value="35MM">35MM</button><button class="active" data-value="50MM">50MM</button><button data-value="85MM">85MM</button></div>
+          <div data-desk="light"><b>LIGHT</b><button data-value="SOFT">SOFT</button><button class="active" data-value="FLASH">FLASH</button><button data-value="EDGE">EDGE</button></div>
+          <div class="live-brief"><span>LIVE PRODUCTION BRIEF</span><b id="brief-head">GROUP 8 · 50MM · FLASH</b><p id="brief-copy">여덟 명을 하나의 비대칭 포메이션으로 두고 카메라 장비까지 와이드 프레임에 포함한다. 하드 플래시로 인물과 세트의 표면을 동시에 선명하게 잡는다.</p></div>
         </div>
       </div>
+      <button class="signal" data-signal="프레임" type="button" aria-label="여섯 번째 장면 수집">●</button>
     </section>
 
     <section class="styling chapter" id="styling" data-chapter="06 / STYLING">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker">06 / STYLING + HMU</p>
-          <h2>Difference through material,<br>not member colors.</h2>
-        </div>
-        <p class="chapter-head__summary">No eight-color assignment. Individuality comes from proportion, surface and movement while the palette stays group-first: paper ivory, graphite and washed berry.</p>
-      </div>
-
-      <div class="style-rail section-pad no-top">
-        <article>
-          <div class="style-rail__image"><img src="assets/style-ivory.jpg" alt="Cream sheer balloon blouse styling reference" loading="lazy"><span>01</span></div>
-          <p class="style-rail__source">REFERENCE · FRAME</p>
-          <h3>PAPER / AIR</h3>
-          <p>Sheer organza, crushed cotton and thin knit. Volume moves before the body, making gesture visible.</p>
-          <a href="https://frame-store.com/products/the-sheer-balloon-blouse-cream" target="_blank" rel="noreferrer">SOURCE ↗</a>
-        </article>
-        <article>
-          <div class="style-rail__image"><img src="assets/style-graphite.jpg" alt="Anthracite tailored suit styling reference" loading="lazy"><span>02</span></div>
-          <p class="style-rail__source">REFERENCE · SCANLAN THEODORE</p>
-          <h3>GRAPHITE / LINE</h3>
-          <p>Clean tailoring, long trouser break and narrow knits. Silhouette creates the group rhythm.</p>
-          <a href="https://www.scanlantheodore.com/au/products/italian-plaid-trouser-anthracite" target="_blank" rel="noreferrer">SOURCE ↗</a>
-        </article>
-        <article>
-          <div class="style-rail__image"><img src="assets/style-berry.jpg" alt="Burgundy satin dress styling reference" loading="lazy"><span>03</span></div>
-          <p class="style-rail__source">REFERENCE · GESTUZ</p>
-          <h3>BERRY / REFLECTION</h3>
-          <p>Satin appears only on two or three members per frame. It catches and passes light like a signal.</p>
-          <a href="https://www.dkcompany.com/global/brands/gestuz" target="_blank" rel="noreferrer">SOURCE ↗</a>
-        </article>
-      </div>
-
-      <div class="hmu section-pad">
-        <div class="hmu__title"><p class="kicker">HMU RULE</p><h3>One face, one interruption.</h3></div>
-        <div class="hmu__grid">
-          <div><span>SKIN</span><strong>Natural satin</strong><p>No uniform glass skin. Keep texture at close distance.</p></div>
-          <div><span>EYE</span><strong>Graphite inner line</strong><p>Placement varies; color does not.</p></div>
-          <div><span>LIP</span><strong>Muted berry stain</strong><p>Built up only for the B version.</p></div>
-          <div><span>HAIR</span><strong>One displaced detail</strong><p>Loose strand, off-center part or borrowed pin.</p></div>
-        </div>
-      </div>
+      <div class="section-title"><span>06 / STYLING</span><h2>BROADCAST<br>TAILORING</h2><p>인터넷식 ‘코어’ 하나를 복제하지 않는다. 같은 팔레트 안에서 길이, 비율, 광택, 노출을 멤버별로 달리해 한 팀과 개인을 동시에 읽히게 한다.</p></div>
+      <figure class="style-board"><img src="assets/same-page-styling.png" alt="8인 방송 테일러링 스타일링 보드"><figcaption>01 JIWOO · 02 CARMEN · 03 YUHA · 04 STELLA · 05 JUUN · 06 A-NA · 07 IAN · 08 YE-ON</figcaption></figure>
+      <div class="palette"><span style="--c:#b8cce5">ICE BLUE</span><span style="--c:#151619">INK BLACK</span><span style="--c:#f0eadf">WARM IVORY</span><span style="--c:#641e2d">OXBLOOD</span><span style="--c:#aab0b5">SILVER</span></div>
+      <div class="style-rules"><article><b>실루엣</b><p>롱 2 · 미디 2 · 쇼트 2 · 트라우저 2</p></article><article><b>헤어</b><p>광택은 통일, 가르마와 묶음 높이는 개인화</p></article><article><b>메이크업</b><p>차가운 피부, 옥스블러드 포인트, 얇은 아이라인</p></article><article><b>액세서리</b><p>브로치·벨트·글러브 중 하나만 선택</p></article></div>
+      <button class="signal" data-signal="실루엣" type="button" aria-label="일곱 번째 장면 수집">●</button>
     </section>
 
     <section class="package chapter" id="package" data-chapter="07 / PACKAGE">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker light">07 / PHYSICAL ALBUM</p>
-          <h2>The package completes<br>the relationship.</h2>
-        </div>
-        <p class="chapter-head__summary">Current Hearts2Hearts releases already support large-format kits, member smart albums and multiple photobook versions. MARGIN keeps that commercial range but gives every format the same relational logic.</p>
-      </div>
-
-      <div class="package-main section-pad no-top">
-        <div class="current-anchor">
-          <div class="current-anchor__image"><img src="assets/lemon-tang-pack.jpg" alt="Official Lemon Tang Summer Kit package contents" loading="lazy"></div>
-          <div><span>CURRENT ECOSYSTEM ANCHOR</span><h3>Lemon Tang<br>Summer Kit</h3><p>Large-format box, 100p photobook, mini book and a complete eight-card set establish physical scale and collectability.</p><a href="https://global.shop.smtown.com/products/hearts2hearts-the-2nd-mini-album-lemon-tang-summer-kit-ver-limited-edition" target="_blank" rel="noreferrer">OFFICIAL PRODUCT SOURCE ↗</a></div>
-        </div>
-
-        <div class="package-proposal">
-          <div class="package-scene" aria-label="MARGIN album package mockup">
-            <div class="package-book"><img src="assets/h2h-group-nme.jpg" alt=""><span>MARG<span>I</span>N</span></div>
-            <div class="package-sleeve"><span>H2H</span><strong>PRIVATE<br>LANGUAGE</strong></div>
-            <div class="package-strip"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span></div>
-            <div class="package-disc">MARGIN<br><small>H2H / 03</small></div>
-          </div>
-          <div class="package-proposal__text"><span>PROPOSED MAIN FORMAT</span><h3>Shared Edition</h3><p>A graphite slipcase holds an ivory photobook. Eight translucent portrait leaves only reveal the complete berry line when stacked in member order.</p></div>
-        </div>
-      </div>
-
-      <div class="sku-grid section-pad">
-        <article><span>01 / GROUP</span><h3>SHARED EDITION</h3><p>92p photobook · CD · 8 translucent leaves · group card · signal strip</p><strong>Team identity first</strong></article>
-        <article><span>02 / UNIT</span><h3>PAIR FOLIO ×4</h3><p>Four 24p folios · pair poster · shared-object card · random 1 of 4</p><strong>Collect by relationship</strong></article>
-        <article><span>03 / SMART</span><h3>MARGIN MARK</h3><p>NFC card · reusable transparent ruler · 1 of 8 member inserts</p><strong>Small, useful, recognizable</strong></article>
-      </div>
+      <div class="section-title light"><span>07 / PACKAGE</span><h2>한 상자 안의<br>여덟 채널.</h2><p>장식물을 늘리는 대신 방송 아카이브라는 사용 경험을 만든다. 포토북, 8인 카드, 채널 가이드, 큐카드, NFC 튜닝 참이 같은 그래픽 규칙을 공유한다.</p></div>
+      <figure class="package-visual"><img src="assets/same-page-package.png" alt="SAME PAGE 실버 아카이브 박스 패키지"><figcaption>AI PACKAGE STUDY · SIZE / PAPER / UNIT COST TO BE TESTED</figcaption></figure>
+      <div class="package-list"><span><b>01</b>실버 아카이브 박스</span><span><b>02</b>160P 포토북</span><span><b>03</b>8인 채널 카드</span><span><b>04</b>접지 방송 포스터</span><span><b>05</b>NFC 튜닝 참</span></div>
+      <button class="signal" data-signal="오브젝트" type="button" aria-label="여덟 번째 장면 수집">●</button>
     </section>
 
     <section class="promotion chapter" id="promotion" data-chapter="08 / PROMOTION">
-      <div class="chapter-head section-pad">
+      <div class="section-title"><span>08 / PROMOTION</span><h2>공개할수록<br>한 화면이 된다.</h2></div>
+      <div class="rollout">
+        <article><span>D-14</span><b>CHANNEL TEST</b><p>멤버별 8초 무음 화면. 시선 방향만으로 다음 멤버의 영상을 가리킨다.</p></article>
+        <article><span>D-10</span><b>CUE CARD</b><p>두 멤버가 한 문장을 반씩 가진 페어 포스터 4종.</p></article>
+        <article><span>D-07</span><b>LIVE SWITCH</b><p>팬이 카메라 1–8을 바꾸며 안무 포메이션을 선택하는 숏폼.</p></article>
+        <article><span>D-03</span><b>ONE PAGE</b><p>여덟 개 세로 화면이 합쳐져 최종 재킷을 완성하는 웹 공개.</p></article>
+      </div>
+      <div class="word-game">
+        <span>8 WORDS / PROMOTION INTERACTION</span><h3>순서대로 눌러 마지막 문장을 완성하세요.</h3>
         <div>
-          <p class="kicker">08 / PROMOTION</p>
-          <h2>Reveal the language,<br>not the answer.</h2>
+          <button type="button" data-word="말하지" data-order="0">말하지</button><button type="button" data-word="않아도" data-order="1">않아도</button>
+          <button type="button" data-word="우리는" data-order="2">우리는</button><button type="button" data-word="이미" data-order="3">이미</button>
+          <button type="button" data-word="같은" data-order="4">같은</button><button type="button" data-word="장면을" data-order="5">장면을</button>
+          <button type="button" data-word="보고" data-order="6">보고</button><button type="button" data-word="있어" data-order="7">있어</button>
         </div>
-        <p class="chapter-head__summary">The rollout teaches fans how MARGIN works: first the empty space, then the gestures, then the relationships, and only at the end the full group image.</p>
+        <p id="sentence">_ _ _ _ _ _ _ _</p>
       </div>
-
-      <ol class="rollout section-pad no-top">
-        <li><span>D−21</span><strong>THE EMPTY FRAME</strong><p>Eight seats, one missing interval. No member reveal.</p><em>POSTER / MOTION 6s</em></li>
-        <li><span>D−14</span><strong>GESTURE FILES</strong><p>Eight hand and eye-line details; audio carries the unfinished hook.</p><em>8 VERTICAL CLIPS</em></li>
-        <li><span>D−10</span><strong>PAIR RELAY</strong><p>Four unit films pass one object across separate rooms.</p><em>4 × 15s FILMS</em></li>
-        <li><span>D−07</span><strong>JACKET DROP</strong><p>White Margin → Borrowed Signal → Afterimage.</p><em>3 IMAGE SETS</em></li>
-        <li><span>D−03</span><strong>MARGIN LINE</strong><p>Fans choose two members and receive one shared-direction prompt.</p><em>WEB / STORY TOOL</em></li>
-        <li><span>D+01</span><strong>ONE-TAKE EIGHT</strong><p>The final performance film resolves every gesture in one frame.</p><em>PERFORMANCE FILM</em></li>
-      </ol>
-
-      <div class="signal-prototype section-pad">
-        <div class="signal-prototype__intro">
-          <p class="kicker light">PROMOTION PROTOTYPE / PAIR RELAY</p>
-          <h3>Choose two signals.</h3>
-          <p>One small interaction demonstrates the campaign idea. It does not block the portfolio, hide content or turn review into a scavenger hunt.</p>
-        </div>
-        <div class="signal-prototype__play">
-          <div class="signal-members" role="group" aria-label="멤버 두 명 선택">
-            <button type="button" data-member="JIWOO">JIWOO</button><button type="button" data-member="CARMEN">CARMEN</button>
-            <button type="button" data-member="YUHA">YUHA</button><button type="button" data-member="STELLA">STELLA</button>
-            <button type="button" data-member="JUUN">JUUN</button><button type="button" data-member="A-NA">A-NA</button>
-            <button type="button" data-member="IAN">IAN</button><button type="button" data-member="YE-ON">YE-ON</button>
-          </div>
-          <div class="signal-output" id="signal-output">
-            <span>WAITING FOR 02 SIGNALS</span>
-            <strong>SELECT A PAIR</strong>
-            <p>The production prompt will appear here.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="decisions chapter" id="decisions" data-chapter="09 / DECISIONS">
-      <div class="chapter-head section-pad">
-        <div>
-          <p class="kicker light">09 / FINAL EDIT</p>
-          <h2>What the recruiter<br>should remember.</h2>
-        </div>
-        <p class="chapter-head__summary">v5 removes the mechanics that competed with the work and keeps the interactions that expose a Creative Visual decision.</p>
-      </div>
-
-      <div class="edit-grid section-pad no-top">
-        <div class="edit-column edit-column--keep">
-          <span>KEEP / STRENGTHEN</span>
-          <ul><li>Evidence-led artist narrative</li><li>Group-first key visual</li><li>Actionable jacket direction</li><li>Material-based styling system</li><li>Commercial package architecture</li><li>One production tool + one promotion prototype</li></ul>
-        </div>
-        <div class="edit-column edit-column--cut">
-          <span>CUT / REDUCE</span>
-          <ul><li>Hidden eight-signal scavenger hunt</li><li>Progress HUD and locked final cover</li><li>Multiple labs that repeat the same proof</li><li>Decorative gamer copy</li><li>Long speculative Korean prose</li><li>Uncredited or off-concept imagery</li></ul>
-        </div>
-      </div>
-
-      <div class="closing section-pad">
-        <p class="closing__label">FINAL CREATIVE THESIS</p>
-        <p class="closing__statement">Hearts2Hearts does not need a louder symbol. It needs an image system that makes eight people’s shared understanding visible.</p>
-        <div class="closing__meta">
-          <p><strong>SCOPE</strong><span>Artist Read / Album / Key Visual / Jacket / Styling / HMU / Package / Promotion / Web Prototype</span></p>
-          <p><strong>STATUS</strong><span>Self-initiated portfolio case study. Editorial and official product images are credited visual references, not commissioned outputs.</span></p>
-          <p><strong>AI DISCLOSURE</strong><span>AI-assisted research synthesis and front-end prototyping. No generated member likenesses are presented as official photography.</span></p>
-        </div>
-      </div>
-
-      <div class="sources section-pad">
-        <p class="kicker light">SELECTED SOURCES</p>
-        <div class="sources__grid">
-          <a href="https://cdn2.smentertainment.com/wp-content/uploads/2025/02/4Q24_ScriptENG_CEO-Message_20250210_vF-1.pdf" target="_blank" rel="noreferrer"><span>01</span>SM Entertainment · 4Q24 CEO Message</a>
-          <a href="https://www.nme.com/the-cover/hearts2hearts-22-06-2026-3952287" target="_blank" rel="noreferrer"><span>02</span>NME · Hearts2Hearts: The Cover, 2026</a>
-          <a href="https://global.shop.smtown.com/products/the-1st-mini-album-focus-photobook-ver-set" target="_blank" rel="noreferrer"><span>03</span>SMTOWN Global · FOCUS Photobook Set</a>
-          <a href="https://global.shop.smtown.com/products/hearts2hearts-the-2nd-mini-album-lemon-tang-summer-kit-ver-limited-edition" target="_blank" rel="noreferrer"><span>04</span>SMTOWN Global · Lemon Tang Summer Kit</a>
-          <a href="https://www.wonderlandmagazine.com/2025/10/29/interview-hearts2hearts/" target="_blank" rel="noreferrer"><span>05</span>Wonderland · Hearts2Hearts Interview, 2025</a>
-          <a href="https://www.marieclaire.com/culture/music/hearts2hearts-lemon-tang-music-taste-interview/" target="_blank" rel="noreferrer"><span>06</span>Marie Claire · Lemon Tang Interview, 2026</a>
-        </div>
-      </div>
+      <footer><div><b>SAME PAGE</b><span>HEARTS2HEARTS · CREATIVE VISUAL PROPOSAL</span></div><p>본 프로젝트는 지원자의 비상업적 자가 주도 기획안이며 SM Entertainment의 공식 프로젝트가 아닙니다. 공식 사진은 분석용 레퍼런스, 생성 이미지는 촬영 방향을 설명하는 비주얼 스터디로만 사용했습니다.</p></footer>
     </section>
   </main>
 
-  <footer class="footer">
-    <div><strong>Hearts2Hearts — MARGIN</strong><span>CREATIVE VISUAL PROPOSAL / V5</span></div>
-    <a href="#top">BACK TO TOP ↑</a>
-  </footer>
+  <div class="final-cover" id="final-cover" aria-hidden="true">
+    <button id="final-close" type="button" aria-label="최종 커버 닫기">CLOSE ×</button>
+    <div class="final-cover__art"><img src="assets/same-page-key-visual.png" alt="SAME PAGE 최종 커버"><span>SAME<br>PAGE</span><i>HEARTS2HEARTS</i></div>
+    <div><span>FINAL COVER UNLOCKED</span><h2>서로 다른 여덟 장면이<br>한 페이지가 되었습니다.</h2><p id="collected-words"></p></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
