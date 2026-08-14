@@ -139,7 +139,7 @@
       specs: [['렌즈', '85mm · 셔터 1/8초'], ['빛', '코발트 반사광'], ['편집', '프레임 잔상 3회 반복']]
     },
     {
-      image: 'assets/h2h-afterimage-ballet-key-visual.png',
+      image: 'assets/ref-h2h-style-01.jpg',
       alt: 'Hearts2Hearts 여덟 멤버 단체 화보',
       number: 'SCENE 05 / 06',
       time: '00:57 — 02:05',
