@@ -139,7 +139,7 @@
       specs: [['렌즈', '85mm · 셔터 1/8초'], ['빛', '코발트 반사광'], ['편집', '프레임 잔상 3회 반복']]
     },
     {
-      image: 'assets/h2h-dream-group-field.jpg',
+      image: 'assets/h2h-afterimage-ballet-key-visual.png',
       alt: 'Hearts2Hearts 여덟 멤버 단체 화보',
       number: 'SCENE 05 / 06',
       time: '00:57 — 02:05',
@@ -148,7 +148,7 @@
       specs: [['렌즈', '28mm 크레인 + 오비트'], ['구도', '방사형 오버헤드'], ['안무', '4+4 분리 → 8인 원']]
     },
     {
-      image: 'assets/h2h-dream-group-square.jpg',
+      image: 'assets/ref-h2h-style-01.jpg',
       alt: 'Hearts2Hearts 단체 커버 화보',
       number: 'SCENE 06 / 06',
       time: '02:29 — 02:54',
@@ -208,7 +208,7 @@
     space: {
       room: { label: '파란 방', image: 'assets/ref-blue-room.jpg', base: '24mm 고정 카메라. 침대와 문 크기를 달리해 깊이가 틀어진 방을 만든다.' },
       greenhouse: { label: '밤의 온실', image: 'assets/ref-syncope-greenhouse.jpg', base: '35mm 저상 돌리. 실제 식물 사이에 파란 잎 하나만 두어 현실의 오류를 만든다.' },
-      studio: { label: '기억 스튜디오', image: 'assets/ref-ultramarine-motion.jpg', base: '85mm 인물 프레임. 배경을 비우고 얼굴과 움직이는 의상 끝을 분리한다.' }
+      studio: { label: '잔상 방', image: 'assets/ref-ultramarine-motion.jpg', base: '85mm 인물 프레임. 촬영 장비가 보이지 않는 빈 공간에서 얼굴과 움직이는 의상 끝만 분리한다.' }
     },
     light: {
       moon: { label: '달빛', copy: '5600K 상부광과 4300K 생활광을 3:1로 둔다.' },
